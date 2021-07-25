@@ -1,0 +1,89 @@
+{
+    "users": [
+        {
+           "id": 1,
+           "name": "Thomas Witherow",
+           "userId": 1,
+           "email": "twitherow@bellsouth.net",
+           "address": "123 happy trails",
+           "phoneNumber": "12341234123",
+           "birthDate": "12-12-1212"
+
+        },
+        {
+            "id": 2,
+            "name": "Annora Witherow",
+            "userId": 2,
+            "email": "awitherow@bellsouth.net",
+            "address": "123 happy trails",
+            "phoneNumber": "12341234123",
+            "birthDate": "11-11-1111"
+ 
+         }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "userId": 1,
+            "name": "housing"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "name": "food assistance"
+        }
+    ],
+    "messages": [
+        {
+            "id": 1,
+            "text": "Hello World",
+            "date": "11-11-1212",
+            "userId": 1,
+            "timestamp": 1231234
+        },
+        {
+            "id": 2,
+            "text": "Hello World!!!",
+            "date": "11-11-1212",
+            "userId": 2,
+            "timestamp": 1231234
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "name": "get together",
+            "userId": 1,
+            "date": "11-11-1212",
+            "location": "Nashville"
+        },
+        {
+            "id": 1,
+            "name": "party",
+            "userId": 1,
+            "date": "11-11-1212",
+            "location": "Nashville"
+        }
+    ],
+    "tags": [
+        {
+            "id": 1,
+            "userId": 1,
+            "serviceId": 1
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "serviceId": 2
+        }
+    ],
+    "newsletter": [
+        {
+            "id": 1,
+            "name": "newsletter 1",
+            "userId": 1,
+            "date": "11-11-1212",
+            "textArea": "HELLO WORLD?"
+        }
+    ]
+}
