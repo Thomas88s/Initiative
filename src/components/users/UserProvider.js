@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react"
 
 
 export const UsersContext = createContext()
-export const FriendProvider = (props) => {
+export const UserProvider = (props) => {
     const [users, setUsers] = useState([])
 
     const getUsers = () => {

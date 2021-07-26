@@ -3,7 +3,7 @@ import { UsersContext } from "./UserProvider"
 import { UserCard } from "./UserCard"
 import "./User.css"
 
-export const FriendList = () => {
+export const UserList = () => {
   const { getUsers, users } = useContext(UsersContext)
    
   useEffect(() => {

@@ -30,7 +30,7 @@ export const Login = () => {
             .then(exists => {
                 if (exists) {
                     // The user id is saved under the key nutshell_user in session Storage. Change below if needed!
-                    sessionStorage.setItem("nutshell_user", exists.id)
+                    sessionStorage.setItem("App_user", exists.id)
                     history.push("/")
                 } else {
                     setExistDialog(true)
