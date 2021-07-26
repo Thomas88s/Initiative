@@ -10,7 +10,7 @@ export const Nutshell = () => (
     <>
       <Route
         render={() => {
-          if (sessionStorage.getItem("App_user")) {
+          if (sessionStorage.getItem("App_user") && ) {
             return (
               <>
                 <NavBar />
