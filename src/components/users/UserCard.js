@@ -1,6 +1,6 @@
 import React, { useContext }from "react"
-//   import { UserContext } from "./UserProvider"
-//   import { useHistory } from "react-router-dom"
+  import { UserContext } from "./UserProvider"
+  import { useHistory } from "react-router-dom"
   import "./User.css"
 
 

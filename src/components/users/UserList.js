@@ -17,7 +17,7 @@ return (
  
     <div className="users">
     {
-      users.map(user => { if(user.currentUserId == sessionStorage.getItem("App_user")){
+      users.map(user => { if(user.currentUserId == sessionStorage.getItem("Foster_user")){
          return <UserCard key={user.id} user={user} />
 
       }else return null
