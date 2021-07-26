@@ -4,13 +4,13 @@ import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
-import './App.css';
+import './Foster.css';
 
-export const Nutshell = () => (
+export const Foster = () => (
     <>
       <Route
         render={() => {
-          if (sessionStorage.getItem("App_user") && ) {
+          if (sessionStorage.getItem("App_user")) {
             return (
               <>
                 <NavBar />
