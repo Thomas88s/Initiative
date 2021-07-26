@@ -5,6 +5,9 @@ import { UserProvider } from "./users/UserProvider"
 import { UserList } from "./users/UserList"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageList } from "./messages/MessageList"
+import { ServiceForm } from "./services/ServiceForm"
+import { ServiceList } from "./services/ServiceList"
+import { ServiceProvider } from "./services/ServiceProvider"
 
 
 export const ApplicationViews = () => {
@@ -26,6 +29,18 @@ export const ApplicationViews = () => {
                     <MessageList />
                 </Route>
             </MessageProvider>
+
+            <ServiceProvider>
+        <Route exact path="/services">
+          <ServiceList />
+        </Route>
+        <Route path="/services/create">
+          <ServiceForm />
+        </Route>
+        <Route path="/services/edit/:serviceId(\d+)">
+          <ServiceForm />
+        </Route>
+      </ServiceProvider>
 
         </>
     )
