@@ -37,7 +37,7 @@ export const ServiceCard = ({ service }) => {
         <section className="service">
             <div className="service_Name">{service.name}</div>
             <div className="service_text">{service.textArea}</div>
-            <button id={service.id} onClick={handleAdd}>Select Service</button>
+            <button id={service.id} onClick={handleAdd}>Add Service</button>
             <button id={service.id} onClick={handleDelete}>Delete Service</button>
         </section>
     )
