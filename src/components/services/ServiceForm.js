@@ -1,11 +1,33 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ServiceContext } from "./ServiceProvider";
+import { TagContext } from "../tags/TagProvider"
 import { useHistory, useParams } from "react-router-dom";
 import "./Service.css";
 
 export const ServiceForm = () => {
     const { addService, editService } = useContext(ServiceContext)
+    // const { addTag, getTag } = useContext(TagContext)
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
+
+    // let i = 0;
+
+    // let taggedService = `${services.map(service => {
+    //     let foundServices = getUserTags().filter((userTag) => {
+    //         if (service.id === userTag.serviceId) {
+    //             return userFavorite;
+    //         }
+    //     });
+
+    // let TagIcon;    
+
+    // if (typeof foundUserFavorite[i] !== 'undefined') {
+    //     if (foundServices[i].serviceId === service.id) {
+    //         taggedIcon = <img className="service_tagged" src="https://img.icons8.com/cute-clipart/64/000000/patrick-star.png" id="tagged--{service.id}" />
+    //     }
+    // // if the array is not empty when clicked, then render the blank star icon
+    // } else {
+    //     taggedIcon = <img className="service_tagged" src="https://img.icons8.com/material-outlined/48/000000/christmas-star.png" id="tagged--${service.id}" />
+    // };
 
     const [service, setService] = useState({
         name: "",
@@ -54,6 +76,8 @@ export const ServiceForm = () => {
                     <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={service.textArea} />
                 </div>
             </fieldset>
+            
+            {/* { taggedIcon } */}
             <button className="btn btn-primary"
                 onClick={event => {
                     handleSaveService()

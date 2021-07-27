@@ -84,6 +84,21 @@
       "id": 2,
       "userId": 2,
       "serviceId": 2
+    },
+    {
+      "userId": 1,
+      "serviceId": 2,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "serviceId": 2,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "serviceId": 1,
+      "id": 5
     }
   ],
   "newsletter": [

@@ -8,6 +8,7 @@ import { MessageList } from "./messages/MessageList"
 import { ServiceForm } from "./services/ServiceForm"
 import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
+import { TagProvider } from "./tags/TagProvider"
 
 
 export const ApplicationViews = () => {
@@ -31,16 +32,18 @@ export const ApplicationViews = () => {
             </MessageProvider>
 
             <ServiceProvider>
-        <Route exact path="/services">
-          <ServiceList />
-        </Route>
-        <Route path="/services/create">
-          <ServiceForm />
-        </Route>
-        <Route path="/services/edit/:serviceId(\d+)">
-          <ServiceForm />
-        </Route>
-      </ServiceProvider>
+                <TagProvider>
+                    <Route exact path="/services">
+                        <ServiceList />
+                    </Route>
+                    <Route path="/services/create">
+                        <ServiceForm />
+                    </Route>
+                    <Route path="/services/edit/:serviceId(\d+)">
+                         <ServiceForm />
+                    </Route>
+                </TagProvider>
+            </ServiceProvider>
 
         </>
     )
