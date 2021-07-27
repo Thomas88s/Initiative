@@ -1,4 +1,4 @@
-import { React, useContext, useEffect, useState } from "react"
+import { React, useContext, useEffect} from "react"
 import { UsersContext } from "./UserProvider"
 import { UserCard } from "./UserCard"
 import "./User.css"

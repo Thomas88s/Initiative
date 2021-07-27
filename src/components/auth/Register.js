@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
-
 import "./Login.css"
 
 export const Register = () => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", address: "", phoneNumber: "", birthDate: "" })
+    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", address: "", phoneNumber: "", birthDate: "", isAdmin: false })
     const [conflictDialog, setConflictDialog] = useState(false)
 
     const history = useHistory()
@@ -40,7 +39,8 @@ export const Register = () => {
                             name: `${registerUser.firstName} ${registerUser.lastName}`,
                             address: registerUser.address,
                             phoneNumber: registerUser.phoneNumber,
-                            birthDate: registerUser.birthDate
+                            birthDate: registerUser.birthDate,
+                            isAdmin: registerUser.isAdmin
                         })
                     })
                         .then(res => res.json())
@@ -90,7 +90,7 @@ export const Register = () => {
                     <input type="phoneNumber" name="phoneNumber" id="phoneNumber" className="form-control" placeholder="Phone Number" required value={registerUser.phoneNumber} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputBirthDate"> Email address </label>
+                    <label htmlFor="inputBirthDate"> Birth Date </label>
                     <input type="date" name="birthDate" id="birthDate" className="form-control" placeholder="Birth Date" required value={registerUser.birthDate} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
