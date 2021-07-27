@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router-dom";
 
 export const MessageForm = () => {
     const { addMessage, editMessage } = useContext(MessageContext)
-    const currentUserId = parseInt(sessionStorage.getItem("nutshell_user"))
+    const currentUserId = parseInt(sessionStorage.getItem("App_user"))
 
     const [message, setMessage] = useState({
         textArea: "",

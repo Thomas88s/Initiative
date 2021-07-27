@@ -5,7 +5,7 @@ import "./Service.css";
 
 export const ServiceForm = () => {
     const { addService, editService } = useContext(ServiceContext)
-    const currentUserId = parseInt(sessionStorage.getItem("Foster_user"))
+    const currentUserId = parseInt(sessionStorage.getItem("App_user"))
 
     const [service, setService] = useState({
         name: "",

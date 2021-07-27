@@ -19,6 +19,15 @@
       "address": "123 happy trails",
       "phoneNumber": "12341234123",
       "birthDate": "11-11-1111"
+    },
+    {
+      "email": "deidre.witherow@hotmail",
+      "name": "Deidre Witherow",
+      "address": "2006 Highpoint CV",
+      "phoneNumber": "6155214866",
+      "birthDate": "2021-07-20",
+      "isAdmin": false,
+      "id": 3
     }
   ],
   "services": [
@@ -33,34 +42,20 @@
       "userId": 1,
       "name": "food assistance",
       "textArea": "Providing Nutrition Assistance"
-    },
-    {
-      "name": "sddadsf",
-      "textArea": "adsfasdfa",
-      "userId": null,
-      "id": 3
     }
   ],
   "messages": [
     {
       "id": 1,
       "textArea": "Hello World",
-      "date": "11-11-1212",
       "userId": 1,
       "timestamp": 1231234
     },
     {
       "id": 2,
       "textArea": "Hello World!!!",
-      "date": "11-11-1212",
       "userId": 2,
       "timestamp": 1231234
-    },
-    {
-      "textArea": "hello world again!",
-      "userId": null,
-      "timeStamp": 1627323570473,
-      "id": 3
     }
   ],
   "events": [

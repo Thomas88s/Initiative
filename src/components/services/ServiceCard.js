@@ -6,7 +6,7 @@ import "./Service.css"
 export const ServiceCard = ({ service }) => {
     const { deleteService } = useContext(ServiceContext)
     const history = useHistory()
-    const currentUserId = parseInt(sessionStorage.getItem("Foster_user"))
+    
 
     const handleDelete = () => {
         deleteService(service.id)
@@ -18,11 +18,10 @@ export const ServiceCard = ({ service }) => {
 
     return (
         <section className="service">
-            <p>{service.name}</p>
-            <p>{service.textArea}</p>
-            {/* <button onClick={() => {
-               history.push(`/services/edit/${service.id}`)
-           }}>Edit</button> */}
+            <div className="service_Name">{service.name}</div>
+            <div className="service_text">{service.textArea}</div>
+            <label htmlFor="checkbox">Add</label><br></br>
+            <input type="checkbox" id="tagBox" name="tagBox" value="tag" />
             <button id={service.id} onClick={handleDelete}>Delete Service</button>
         </section>
     )
