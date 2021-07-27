@@ -99,6 +99,11 @@
       "userId": 1,
       "serviceId": 1,
       "id": 5
+    },
+    {
+      "userId": 1,
+      "serviceId": 2,
+      "id": 6
     }
   ],
   "newsletter": [
