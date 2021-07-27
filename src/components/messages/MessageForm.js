@@ -3,6 +3,14 @@ import { MessageContext } from "./MessageProvider";
 import "./Message.css";
 import { useHistory, useParams } from "react-router-dom";
 
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+
+
 export const MessageForm = () => {
     const { addMessage, editMessage } = useContext(MessageContext)
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
@@ -19,7 +27,7 @@ export const MessageForm = () => {
     const handleControlledInputChange = (event) => {
         const newMessage = { ...message }
         newMessage[event.target.id] = event.target.value
-        newMessage.timeStamp = Date.now()
+        newMessage.timeStamp = today
         setMessage(newMessage)
     }
 
