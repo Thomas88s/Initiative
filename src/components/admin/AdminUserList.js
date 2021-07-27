@@ -1,9 +1,9 @@
 import { React, useContext, useEffect} from "react"
-import { UsersContext } from "./UserProvider"
-import { UserCard } from "./UserCard"
-import "./User.css"
+import { UsersContext } from "../users/UserProvider"
+import { UserCard } from "../users/UserCard"
+import "../users/User.css"
 
-export const UserList = () => {
+export const AdminUserList = () => {
   const { getUsers, users } = useContext(UsersContext)
    
   useEffect(() => {
@@ -17,13 +17,11 @@ return (
  
     <div className="users">
     {
-      users.map(user => { if(user.currentUserId == sessionStorage.getItem("Foster_user")){
+      users.map(user => { 
          return <UserCard key={user.id} user={user} />
-
-      }else return null
-      })
+        }
+     )
     }
     </div>
-  </>
-)
-}
+        </>
+)}
