@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { ServiceContext } from "./ServiceProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./Service.css";

@@ -1,19 +1,13 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { useHistory } from "react-router-dom"
 import { ServiceContext } from "../services/ServiceProvider"
-import { TagContext } from "../tags/TagProvider"
 import "../services/Service.css"
 
 export const UserServiceCard = ({ service }) => {
     const { deleteService } = useContext(ServiceContext)
-    const currentUserId = parseInt(sessionStorage.getItem("App_user"))
     
-    const [tag, setTag] = useState({
-        userId: currentUserId,
-        serviceId: service.id
-    })
     
-    const { addTag } = useContext(TagContext)
+    
     const history = useHistory()
     
     const handleDelete = () => {

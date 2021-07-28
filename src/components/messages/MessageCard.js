@@ -6,7 +6,7 @@ import "./Message.css"
 export const MessageCard = ({ message }) => {
     const { deleteMessage } = useContext(MessageContext)
     const history = useHistory()
-    const currentUserId = parseInt(sessionStorage.getItem("App_user"))
+    
 
     const handleDelete = () => {
         deleteMessage(message.id)
