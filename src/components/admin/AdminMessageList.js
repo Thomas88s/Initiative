@@ -8,7 +8,8 @@ import "../messages/Message.css"
 export const AdminMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
     const { getUsers } = useContext(UsersContext)
-
+   
+   
     useEffect(() => {
         getMessages()
         .then(getUsers())

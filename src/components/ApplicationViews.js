@@ -5,7 +5,7 @@ import { UserProvider } from "./users/UserProvider"
 import { UserList } from "./users/UserProfile"
 import { AdminUserList } from "./admin/AdminUserList"
 import { AdminMessageList } from "./admin/AdminMessageList"
-// import { AdminMessageForm } from "./admin/AdminMessageForm"
+import { AdminServiceForm } from "./admin/AdminServiceForm"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageList } from "./messages/MessageList"
 import { ServiceForm } from "./services/ServiceForm"
@@ -72,7 +72,21 @@ export const ApplicationViews = () => {
                 </ServiceProvider>    
             </UserProvider>
 
-            {/* <UserProvider>
+            <ServiceProvider>
+                <MessageProvider>
+                    <TagProvider>
+                        <UserProvider>
+                            <Route exact path="/admin/users">
+                                <UserList />
+                                <UserServiceList />
+                                <UserMessageList />
+                            </Route>
+                        </UserProvider>
+                    </TagProvider>
+                </MessageProvider>
+            </ServiceProvider>
+
+            <UserProvider>
                 <MessageProvider>
                     <Route path="/admin/messages">
                         <AdminMessageList />
@@ -84,6 +98,7 @@ export const ApplicationViews = () => {
                 <TagProvider>
                     <Route exact path="/admin/services">
                         <ServiceList />
+                        <AdminServiceForm />
                     </Route>
                     <Route path="/admin/services/create">
                         <ServiceForm />
@@ -92,7 +107,7 @@ export const ApplicationViews = () => {
                          <ServiceForm />
                     </Route>
                 </TagProvider>
-            </ServiceProvider> */}
+            </ServiceProvider>
 
         </>
     )

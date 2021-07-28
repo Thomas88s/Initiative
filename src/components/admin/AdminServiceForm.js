@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { ServiceContext } from "../services/ServiceProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "../services/Service.css";
 
-export const ServiceForm = () => {
+export const AdminServiceForm = () => {
     const { addService, editService } = useContext(ServiceContext)
     // const { addTag, getTag } = useContext(TagContext)
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))

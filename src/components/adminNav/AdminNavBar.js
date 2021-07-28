@@ -11,7 +11,7 @@ export const AdminNavBar = (props) => {
           <Link className="nav-link" to="/admin">Admin Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/admin/users">Users Profile</Link>
+          <Link className="nav-link" to="/admin/users">View Profile</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/admin/messages">Messages</Link>
@@ -21,6 +21,12 @@ export const AdminNavBar = (props) => {
         </li>  
         <li className="nav-item">
           <Link className="nav-link" to="">Users Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/messages">User Messages</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/services">User Services</Link>
         </li>
       </ul>
     </nav>
