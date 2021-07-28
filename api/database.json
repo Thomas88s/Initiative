@@ -72,23 +72,21 @@
       "timestamp": 1231234
     },
     {
-      "textArea": "testing",
-      "senderId": 1,
-      "receiverId": 3,
+      "textArea": "yep yep yep ",
+      "userId": 2,
       "timeStamp": "07/28/2021",
       "id": 3
     },
     {
-      "textArea": "testing 2",
+      "textArea": "again again",
       "senderId": 1,
-      "receiverId": 3,
+      "receiverId": 2,
       "timeStamp": "07/28/2021",
       "id": 4
     },
     {
-      "textArea": "testing 77",
-      "senderId": 1,
-      "receiverId": 2,
+      "textArea": "hello hello hello",
+      "userId": 2,
       "timeStamp": "07/28/2021",
       "id": 5
     }

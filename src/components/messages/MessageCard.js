@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { useHistory } from "react-router-dom"
 import { MessageContext } from "./MessageProvider"
+// import { UsersContext } from "../users/UserProvider"
 import "./Message.css"
 
 export const MessageCard = ({ message }) => {
@@ -17,9 +18,10 @@ export const MessageCard = ({ message }) => {
             })
     }
 
-
+    
     return (
         <section className="message">
+            {/* <p>From Admin:</p> */}
             <p>{message.textArea}</p>
             <button id={message.id} onClick={handleDelete}>Delete</button>
         </section>
