@@ -1,0 +1,10 @@
+.navbar {
+    
+    display: inline;
+    justify-content: left;
+}
+
+.navbar__item {
+   
+    list-style-type: none;
+}

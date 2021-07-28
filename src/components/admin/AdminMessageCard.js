@@ -14,7 +14,7 @@ export const AdminMessageCard = ({ message }) => {
     const handleDelete = () => {
         deleteMessage(message.id)
             .then(() => {
-                history.push("/messages")
+               
             })
     }
 
