@@ -5,6 +5,9 @@ import { UsersContext } from "./UserProvider"
 import { TagContext } from "../tags/TagProvider"
 import "../services/Service.css"
 
+
+
+
 export const UserServiceList = () => {
     const { getServices } = useContext(ServiceContext)
     const { getUsers } = useContext(UsersContext)
@@ -12,9 +15,6 @@ export const UserServiceList = () => {
 
     let user = parseInt(sessionStorage.getItem("App_user"))
     let foundTags = tags.filter(tag => (tag.userId === user)) 
-
-    
-   
 
     useEffect(() => {
         getUsers()

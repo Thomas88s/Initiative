@@ -56,7 +56,7 @@ export const ServiceForm = () => {
                 </div>
             </fieldset>
             
-            {/* { taggedIcon } */}
+           
             <button className="btn btn-primary"
                 onClick={event => {
                     handleSaveService()

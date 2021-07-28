@@ -42,20 +42,55 @@
       "userId": 1,
       "name": "food assistance",
       "textArea": "Providing Nutrition Assistance"
+    },
+    {
+      "name": "New service",
+      "textArea": "new service",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "even better service",
+      "textArea": "good stuff",
+      "userId": 1,
+      "id": 4
     }
   ],
   "messages": [
     {
       "id": 1,
       "textArea": "Hello World",
-      "userId": 1,
+      "senderId": 1,
+      "receiverId": 2,
       "timestamp": 1231234
     },
     {
       "id": 2,
       "textArea": "Hello World!!!",
-      "userId": 2,
+      "senderId": 2,
+      "receiverId": 1,
       "timestamp": 1231234
+    },
+    {
+      "textArea": "testing",
+      "senderId": 1,
+      "receiverId": 3,
+      "timeStamp": "07/28/2021",
+      "id": 3
+    },
+    {
+      "textArea": "testing 2",
+      "senderId": 1,
+      "receiverId": 3,
+      "timeStamp": "07/28/2021",
+      "id": 4
+    },
+    {
+      "textArea": "testing 77",
+      "senderId": 1,
+      "receiverId": 2,
+      "timeStamp": "07/28/2021",
+      "id": 5
     }
   ],
   "events": [
@@ -89,6 +124,11 @@
       "userId": 1,
       "serviceId": 2,
       "id": 3
+    },
+    {
+      "userId": 2,
+      "serviceId": 3,
+      "id": 4
     }
   ],
   "newsletter": [

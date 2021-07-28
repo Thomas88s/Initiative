@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react"
 import { ServiceContext } from "./ServiceProvider"
 import { ServiceCard } from "./ServiceCard"
-import { ServiceForm } from "./ServiceForm"
 import "./Service.css"
 
 export const ServiceList = () => {
@@ -22,7 +21,7 @@ export const ServiceList = () => {
                 })}
             </div>
             <div>
-                <ServiceForm />
+               
             </div>
         </>
     )
