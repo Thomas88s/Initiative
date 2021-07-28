@@ -22,6 +22,7 @@ export const MessageList = () => {
                 })}
             </div>
             <div>
+            <h4>Send message to Services</h4>
                 <MessageForm />
             </div>
         </>

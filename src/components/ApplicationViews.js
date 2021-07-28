@@ -4,6 +4,8 @@ import { Home } from "./Home"
 import { UserProvider } from "./users/UserProvider"
 import { UserList } from "./users/UserProfile"
 import { AdminUserList } from "./admin/AdminUserList"
+import { AdminMessageList } from "./admin/AdminMessageList"
+import { AdminMessageForm } from "./admin/AdminMessageForm"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageList } from "./messages/MessageList"
 import { ServiceForm } from "./services/ServiceForm"
@@ -11,6 +13,7 @@ import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
 import { TagProvider } from "./tags/TagProvider"
 import { UserServiceList } from "./users/UserServices"
+import { UserMessageList } from "./users/UserMessageList"
 
 
 
@@ -24,14 +27,17 @@ export const ApplicationViews = () => {
             </Route>
 
             <ServiceProvider>
-                <TagProvider>
-                    <UserProvider>
-                        <Route exact path="/users">
-                            <UserList />
-                            <UserServiceList />
-                        </Route>
-                    </UserProvider>
-                </TagProvider>
+                <MessageProvider>
+                    <TagProvider>
+                        <UserProvider>
+                            <Route exact path="/users">
+                                <UserList />
+                                <UserServiceList />
+                                <UserMessageList />
+                            </Route>
+                        </UserProvider>
+                    </TagProvider>
+                </MessageProvider>
             </ServiceProvider>
 
             <MessageProvider>
@@ -56,10 +62,13 @@ export const ApplicationViews = () => {
 
             <UserProvider>
                 <ServiceProvider>
-                    <Route exact path="/admin">
-                        <AdminUserList />
-                        <ServiceForm />
-                    </Route>
+                    <MessageProvider>
+                        <Route exact path="/admin">
+                            <AdminUserList />
+                            <AdminMessageList />
+                            <ServiceForm />
+                        </Route>
+                    </MessageProvider>
                 </ServiceProvider>    
             </UserProvider>
 
