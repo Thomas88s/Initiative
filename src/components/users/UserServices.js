@@ -6,20 +6,20 @@ import { TagContext } from "../tags/TagProvider"
 import "../services/Service.css"
 
 export const UserServiceList = () => {
-    const { services, getServices } = useContext(ServiceContext)
-    const { getUsers, users } = useContext(UsersContext)
+    const { getServices } = useContext(ServiceContext)
+    const { getUsers } = useContext(UsersContext)
     const { getTags, tags } = useContext(TagContext)
 
-    let foundUser = users.find(user => (user.id === parseInt(sessionStorage.getItem("App_user"))))
-    let foundTags = tags.filter(tag => (tag.userId === foundUser.id))
-    let foundService = services.find(service => (service.id === foundTags.serviceId))
+    let user = parseInt(sessionStorage.getItem("App_user"))
+    let foundTags = tags.filter(tag => (tag.userId === user)) 
+
     
+   
+
     useEffect(() => {
         getUsers()
         .then(getTags())
         .then(getServices())
-        
-        .then(console.log(foundService))
         
     }, [])
 
@@ -27,11 +27,11 @@ export const UserServiceList = () => {
     return (
         <>
             <h2>Service Board</h2>
-            {  
-   foundService?  <div className="users">
-        <UserServiceCard key={foundService.id} service={foundService} />
-    </div> : <div></div>
-    }
+            <div className="messages">
+                {foundTags.map(service => {
+                    return <UserServiceCard key={service.service.id} service={service.service} />
+                })}
+            </div>
         </>
     )
 }    
