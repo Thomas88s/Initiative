@@ -4,6 +4,7 @@ import { MessageContext } from "../messages/MessageProvider"
 import { UsersContext } from "../users/UserProvider"
 import "../messages/Message.css"
 
+
 export const AdminMessageCard = ({ message }) => {
     const { deleteMessage } = useContext(MessageContext)
     const { users } = useContext(UsersContext)
@@ -11,10 +12,11 @@ export const AdminMessageCard = ({ message }) => {
 
     const foundSender = users.find(user => (user.id === message.senderId))
 
+    
     const handleDelete = () => {
         deleteMessage(message.id)
             .then(() => {
-               
+                history.push("/messages")
             })
     }
 
