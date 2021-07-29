@@ -11,8 +11,8 @@ export const AdminMessageList = () => {
    
    
     useEffect(() => {
-        getMessages()
-        .then(getUsers())
+        getUsers()
+        .then(getMessages())
         
     }, [])
 

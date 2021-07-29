@@ -1,6 +1,6 @@
 import { React, useContext, useEffect} from "react"
 import { UsersContext } from "../../users/UserProvider"
-import { UserCard } from "../../users/UserCard"
+import { AdminUserCard } from "./AdminUserCard2"
 import "../../users/User.css"
 
 export const AdminUserList = () => {
@@ -18,7 +18,7 @@ return (
     <div className="users">
     {
       users.map(user => { 
-         return <UserCard key={user.id} user={user} />
+         return <AdminUserCard key={user.id} user={user} />
         }
      )
     }

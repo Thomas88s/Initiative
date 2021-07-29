@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import { ServiceContext } from "../../services/ServiceProvider";
 import { UsersContext } from "../../users/UserProvider";
-import { useHistory, useParams } from "react-router-dom";
 import "../../services/Service.css";
 
 export const AdminServiceForm = () => {
@@ -14,6 +14,11 @@ export const AdminServiceForm = () => {
         textArea: "",
         userId: currentUserId
     })
+    useEffect(() => {
+        getServices()
+        .then(getUsers())
+    }, [])
+  
 
     const [isLoading, setIsLoading] = useState(true);
     const { serviceId } = useParams()
@@ -21,11 +26,17 @@ export const AdminServiceForm = () => {
 
     const handleControlledInputChange = (event) => {
         const newService = { ...service }
-        newService[event.target.id] = event.target.value
+        let selectedVal = event.target.value
+        
+        if (event.target.id.includes("Id")) {
+         selectedVal = parseInt(selectedVal)
+        }
+        newService[event.target.id] = selectedVal
         setService(newService)
     }
 
-    const handleSaveService = () => {
+    const handleSaveService = (controlEvent) => {
+        controlEvent.preventDefault() 
         if (service.textArea === "") {
             window.alert("Cannot post blank service")
         } else {
@@ -36,12 +47,16 @@ export const AdminServiceForm = () => {
                     name: service.name,
                     textArea: service.textArea,
                     userId: currentUserId
-                   
+                    
                 })
-                    .then(() => history.push("/services"))
+                .then(() => history.push("/services"))
+                controlEvent.preventDefault() 
             } else {
-                addService(service)
-                    .then(() => history.push("/services"))
+                addService({
+                    id: service.id,
+                    name: service.name,
+                    textArea: service.textArea,
+                    userId: currentUserId})
             }
         }
         useEffect(() => {

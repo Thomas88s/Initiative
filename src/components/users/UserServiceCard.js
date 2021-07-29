@@ -8,13 +8,11 @@ export const UserServiceCard = ({ service }) => {
     
     
     
-    const history = useHistory()
+    
     
     const handleDelete = () => {
         deleteService(service.id)
-            .then(() => {
-                history.push("/services")
-            })
+           
     }
    
 
