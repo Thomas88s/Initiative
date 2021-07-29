@@ -4,7 +4,6 @@
       "id": 1,
       "isAdmin": true,
       "name": "Thomas Witherow",
-      "userId": 1,
       "email": "twitherow@bellsouth.net",
       "address": "123 happy trails",
       "phoneNumber": "12341234123",
@@ -14,7 +13,6 @@
       "id": 2,
       "isAdmin": false,
       "name": "Annora Witherow",
-      "userId": 2,
       "email": "awitherow@bellsouth.net",
       "address": "123 happy trails",
       "phoneNumber": "12341234123",
@@ -66,23 +64,11 @@
       "timestamp": 1231234
     },
     {
-      "textArea": "yep yep yep ",
-      "userId": 2,
-      "timeStamp": "07/28/2021",
-      "id": 3
-    },
-    {
       "textArea": "again again",
       "senderId": 1,
       "receiverId": 2,
       "timeStamp": "07/28/2021",
       "id": 4
-    },
-    {
-      "textArea": "hello hello hello",
-      "userId": 2,
-      "timeStamp": "07/28/2021",
-      "id": 5
     },
     {
       "textArea": "well hello there",
