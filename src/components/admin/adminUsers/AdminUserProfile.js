@@ -5,7 +5,7 @@ import { MessageContext } from "../../messages/MessageProvider"
 import { AdminUserServiceCard } from "./AdminUserServiceCard"
 import { TagContext } from "../../tags/TagProvider"
 import { AdminUserMessageCard } from "./AdminUserMessageCard"
-import { UserCard } from "../../users/UserCard"
+import { AdminUserCard } from "./AdminUserCard"
 import "../../users/User.css"
 
 
@@ -59,11 +59,11 @@ export const AdminUserProfile = () => {
     <h1>User Profile</h1>
    {  
      <div className="users">
-        <UserCard key={selectedUser.id} user={selectedUser} />
+        <AdminUserCard key={selectedUser.id} user={selectedUser} />
     </div> 
     }
 
-     <h2>User  Subscribed Services</h2>
+     <h2>Services User Subscribed To</h2>
             <div className="messages">
                 {foundTags.map(service => {
                     return <AdminUserServiceCard key={service.service.id} service={service.service} />

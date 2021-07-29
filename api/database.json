@@ -3,7 +3,7 @@
     {
       "id": 1,
       "isAdmin": true,
-      "name": "Thomas Witherow",
+      "name": "Admin",
       "email": "twitherow@bellsouth.net",
       "address": "123 happy trails",
       "phoneNumber": "12341234123",
@@ -30,22 +30,16 @@
   ],
   "services": [
     {
-      "name": "Newest bestest service",
-      "textArea": "iits ggreeeeeeeaaaaaaaatttttttt!!!!",
+      "name": "great service 1",
+      "textArea": "great service 1",
       "userId": 1,
-      "id": 3
+      "id": 1
     },
     {
-      "name": "newest service get it",
-      "textArea": "asdhfksahkljfhakjdhf",
+      "name": "great service 1",
+      "textArea": "great service 1",
       "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "help me ",
-      "textArea": "help me",
-      "userId": 1,
-      "id": 5
+      "id": 2
     }
   ],
   "messages": [
@@ -76,6 +70,33 @@
       "receiverId": 3,
       "timeStamp": "07/29/2021",
       "id": 6
+    },
+    {
+      "textArea": "hello annora",
+      "senderId": 1,
+      "receiverId": 2,
+      "timeStamp": "07/29/2021",
+      "id": 7
+    },
+    {
+      "textArea": "Hello deidre",
+      "senderId": 1,
+      "receiverId": 3,
+      "timeStamp": "07/29/2021",
+      "id": 8
+    },
+    {
+      "textArea": "\"senderId\": 1,",
+      "senderId": 3,
+      "timeStamp": "07/29/2021",
+      "id": 9
+    },
+    {
+      "textArea": "WELL WELL WELL",
+      "receiverId": 1,
+      "senderId": 2,
+      "timeStamp": "07/29/2021",
+      "id": 10
     }
   ],
   "events": [
@@ -94,33 +115,7 @@
       "location": "Nashville"
     }
   ],
-  "tags": [
-    {
-      "userId": 1,
-      "serviceId": 3,
-      "id": 1
-    },
-    {
-      "userId": 3,
-      "serviceId": 3,
-      "id": 2
-    },
-    {
-      "userId": 3,
-      "serviceId": 4,
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "serviceId": 4,
-      "id": 4
-    },
-    {
-      "userId": 2,
-      "serviceId": 5,
-      "id": 5
-    }
-  ],
+  "tags": [],
   "newsletter": [
     {
       "id": 1,

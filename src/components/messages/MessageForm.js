@@ -17,7 +17,8 @@ export const MessageForm = () => {
 
     const [message, setMessage] = useState({
         textArea: "",
-        userId: currentUserId,
+        receiverId: 1,
+        senderId: currentUserId,
         timeStamp: ""
     })
 
@@ -39,7 +40,7 @@ export const MessageForm = () => {
                 editMessage({
                     id: message.id,
                     textArea: message.textArea,
-                    userId: currentUserId,
+                    senderId: currentUserId,
                     timeStamp: message.timeStamp
                 })
                     .then(() => history.push("/messages"))
