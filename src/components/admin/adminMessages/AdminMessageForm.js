@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { MessageContext } from "../messages/MessageProvider";
-import { UsersContext } from "../users/UserProvider";
+import { MessageContext } from "../../messages/MessageProvider";
+import { UsersContext } from "../../users/UserProvider";
 import { useHistory, useParams } from "react-router-dom";
-import "../messages/Message.css";
+import "../../messages/Message.css";
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');

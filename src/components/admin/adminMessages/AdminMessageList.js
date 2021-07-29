@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react"
-import { MessageContext } from "../messages/MessageProvider"
-import { UsersContext } from "../users/UserProvider"
+import { MessageContext } from "../../messages/MessageProvider"
+import { UsersContext } from "../../users/UserProvider"
 import { AdminMessageCard } from "./AdminMessageCard"
 import { AdminMessageForm } from "./AdminMessageForm"
-import "../messages/Message.css"
+import "../../messages/Message.css"
 
 export const AdminMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)

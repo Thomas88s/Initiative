@@ -1,4 +1,4 @@
-import { React, useContext, useEffect} from "react"
+import { React, useContext, useEffect, useState} from "react"
 import { UsersContext } from "../../users/UserProvider"
 import { ServiceContext } from "../../services/ServiceProvider"
 import { MessageContext } from "../../messages/MessageProvider"
@@ -10,31 +10,59 @@ import "../../users/User.css"
 
 
 export const AdminUserProfile = () => {
-    const { getUsers, users } = useContext(UsersContext)
+    const { getUsers, users, getUserById } = useContext(UsersContext)
     const { messages, getMessages } = useContext(MessageContext)
     const { getServices } = useContext(ServiceContext)
     const { getTags, tags } = useContext(TagContext)
-    let foundUser = users.find(user => (user.id === parseInt(sessionStorage.getItem("App_user"))))
-    let user = parseInt(sessionStorage.getItem("App_user"))
-    let foundTags = tags.filter(tag => (tag.userId === user)) 
-    let foundMessages = messages.filter(message => (message.receiverId === user)) 
+
+    const user = getUserById
+    let foundTags = tags.filter(tag => (tag.userId === user.id)) 
+    let foundMessages = messages.filter(message => (message.receiverId === user.id)) 
+    
+    // let foundUser = users.find(user => (user.id === parseInt(sessionStorage.getItem("App_user"))))
+    
+    
+    // const [user, setUser] = useState({
+    //     name: "",
+    //     address: "",
+    //     phoneNumber: "",
+    //     birthDate: "",
+    //     userId: 0
+    // });
 
     useEffect(() => {
         getMessages()
         .then(getUsers())
         .then(getTags())
         .then(getServices())
-      }, [])
+    }, [])
+    
+    const handleControlledInputChange = (event) => {
+        const newUser = { ...user }
+        newUser[event.target.id] = event.target.value
+        // setUser(newUser)
+    }
+
     
     
     return (
         <>
-  
+    <div className="form-group">
+              <label htmlFor="userId">User: </label>
+              <select name="user" id="userId" className="form-control" value={user.userId} onChange={handleControlledInputChange}>
+                <option value="0">Select a user</option>
+                {users.map(user => (
+                  <option key={user.id} value={user.id}>
+                    {user.name}
+                  </option>
+                ))}
+              </select>
+            </div>
     <h1>User Profile</h1>
    {  
-   foundUser?  <div className="users">
-        <UserCard key={foundUser.id} user={foundUser} />
-    </div> : <div></div>
+     <div className="users">
+        <UserCard key={user.id} user={user} />
+    </div> 
     }
 
      <h2>User  Subscribed Services</h2>

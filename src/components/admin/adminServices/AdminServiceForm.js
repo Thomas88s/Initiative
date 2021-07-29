@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { ServiceContext } from "../services/ServiceProvider";
-import { UsersContext } from "../users/UserProvider";
+import { ServiceContext } from "../../services/ServiceProvider";
+import { UsersContext } from "../../users/UserProvider";
 import { useHistory, useParams } from "react-router-dom";
-import "../services/Service.css";
+import "../../services/Service.css";
 
 export const AdminServiceForm = () => {
     const { addService, editService, getServiceById, getServices } = useContext(ServiceContext)

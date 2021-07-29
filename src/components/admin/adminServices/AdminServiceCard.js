@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { useHistory } from "react-router-dom"
-import { ServiceContext } from "../services/ServiceProvider"
-import "../services/Service.css"
+import { ServiceContext } from "../../services/ServiceProvider"
+import "../../services/Service.css"
 
 export const AdminServiceCard = ({ service }) => {
     const { deleteService } = useContext(ServiceContext)
