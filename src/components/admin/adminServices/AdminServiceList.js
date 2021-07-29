@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
-import { ServiceContext } from "../services/ServiceProvider"
+import { ServiceContext } from "../../services/ServiceProvider"
 import { AdminServiceCard } from "./AdminServiceCard"
-import "../services/Service.css"
+import "../../services/Service.css"
 
 export const AdminServiceList = () => {
     const { services, getServices } = useContext(ServiceContext)

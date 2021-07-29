@@ -1,14 +1,12 @@
 import React, { useContext, useEffect } from "react"
-import { useHistory } from "react-router-dom"
-import { MessageContext } from "../messages/MessageProvider"
-import { UsersContext } from "../users/UserProvider"
-import "../messages/Message.css"
+import { MessageContext } from "../../messages/MessageProvider"
+import { UsersContext } from "../../users/UserProvider"
+import "../../messages/Message.css"
 
 export const AdminMessageCard = ({ message }) => {
     const { deleteMessage } = useContext(MessageContext)
     const { getUsers, users } = useContext(UsersContext)
-    const history = useHistory()
-
+    
     useEffect(() => {
         getUsers()
       }, [])
