@@ -12,44 +12,42 @@ import "../../users/User.css"
 export const AdminUserProfile = () => {
     const { getUsers, users, getUserById } = useContext(UsersContext)
     const { messages, getMessages } = useContext(MessageContext)
-    const { getServices } = useContext(ServiceContext)
     const { getTags, tags } = useContext(TagContext)
-
+    const { getServices } = useContext(ServiceContext)
     const user = getUserById
-    let foundTags = tags.filter(tag => (tag.userId === user.id)) 
-    let foundMessages = messages.filter(message => (message.receiverId === user.id)) 
-    
-    // let foundUser = users.find(user => (user.id === parseInt(sessionStorage.getItem("App_user"))))
-    
-    
-    // const [user, setUser] = useState({
-    //     name: "",
-    //     address: "",
-    //     phoneNumber: "",
-    //     birthDate: "",
-    //     userId: 0
-    // });
+   
+    const [selectedUser, setSelectedUser] = useState({
+        name: "",
+        address: "",
+        phoneNumber: "",
+        birthDate: "",
+        
+    });
 
     useEffect(() => {
-        getMessages()
-        .then(getUsers())
-        .then(getTags())
+        getUsers()
         .then(getServices())
+        .then(getTags())
+        .then(getMessages())
     }, [])
     
-    const handleControlledInputChange = (event) => {
-        const newUser = { ...user }
-        newUser[event.target.id] = event.target.value
-        // setUser(newUser)
-    }
+    const handleSelectUser = (event) => {
+        if (selectedUser === "") {
+            window.alert("Cannot post blank message")
+        } else {
+        const selectedUserId = parseInt(event.target.value)
+        const foundUser = users.find(user => user.id === selectedUserId)
+        setSelectedUser(foundUser)
+    }}
 
-    
+    let foundTags = tags.filter(tag => (tag.userId === selectedUser.id)) 
+    let foundMessages = messages.filter(message => (message.receiverId === selectedUser.id)) 
     
     return (
         <>
     <div className="form-group">
               <label htmlFor="userId">User: </label>
-              <select name="user" id="userId" className="form-control" value={user.userId} onChange={handleControlledInputChange}>
+              <select name="user" id="userId" className="form-control" value={user.id} onChange={handleSelectUser}>
                 <option value="0">Select a user</option>
                 {users.map(user => (
                   <option key={user.id} value={user.id}>
@@ -61,7 +59,7 @@ export const AdminUserProfile = () => {
     <h1>User Profile</h1>
    {  
      <div className="users">
-        <UserCard key={user.id} user={user} />
+        <UserCard key={selectedUser.id} user={selectedUser} />
     </div> 
     }
 
