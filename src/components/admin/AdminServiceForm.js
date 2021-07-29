@@ -1,11 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ServiceContext } from "../services/ServiceProvider";
+import { UsersContext } from "../users/UserProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "../services/Service.css";
 
 export const AdminServiceForm = () => {
-    const { addService, editService } = useContext(ServiceContext)
-    // const { addTag, getTag } = useContext(TagContext)
+    const { addService, editService, getServiceById, getServices } = useContext(ServiceContext)
+    const { getUsers } = useContext(UsersContext)
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
 
     const [service, setService] = useState({
@@ -14,6 +15,7 @@ export const AdminServiceForm = () => {
         userId: currentUserId
     })
 
+    const [isLoading, setIsLoading] = useState(true);
     const { serviceId } = useParams()
     const history = useHistory()
 
@@ -27,7 +29,8 @@ export const AdminServiceForm = () => {
         if (service.textArea === "") {
             window.alert("Cannot post blank service")
         } else {
-            if (serviceId) {
+            setIsLoading(true);
+        }    if (serviceId) {
                 editService({
                     id: service.id,
                     name: service.name,
@@ -41,7 +44,22 @@ export const AdminServiceForm = () => {
                     .then(() => history.push("/services"))
             }
         }
-    }
+        useEffect(() => {
+            getServices()
+            .then(getUsers())
+            .then(() => {
+              if (serviceId) {
+                getServiceById(serviceId)
+                .then(service => {
+                    setService(service)
+                    setIsLoading(false)
+                })
+              } else {
+                setIsLoading(false)
+              }
+            })
+          }, [])
+       
 
     return (
         <form className="serviceForm">
@@ -58,9 +76,8 @@ export const AdminServiceForm = () => {
             
            
             <button className="btn btn-primary"
-                onClick={event => {
-                    handleSaveService()
-                }}>
+             disabled={isLoading}
+                onClick={handleSaveService}>
                 Post
             </button>
         </form>

@@ -3,7 +3,7 @@ import { UsersContext } from "./UserProvider"
 import { UserCard } from "./UserCard"
 import "./User.css"
 
-export const UserList = () => {
+export const UserProfile = () => {
     const { getUsers, users } = useContext(UsersContext)
     let foundUser = users.find(user => (user.id === parseInt(sessionStorage.getItem("App_user"))))
   

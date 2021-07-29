@@ -26,7 +26,7 @@ export const UserServiceList = () => {
 
     return (
         <>
-            <h2>Service Board</h2>
+            <h2>User Services</h2>
             <div className="messages">
                 {foundTags.map(service => {
                     return <UserServiceCard key={service.service.id} service={service.service} />

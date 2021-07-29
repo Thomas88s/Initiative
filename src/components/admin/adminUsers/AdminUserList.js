@@ -1,7 +1,7 @@
 import { React, useContext, useEffect} from "react"
-import { UsersContext } from "../users/UserProvider"
-import { UserCard } from "../users/UserCard"
-import "../users/User.css"
+import { UsersContext } from "../../users/UserProvider"
+import { UserCard } from "../../users/UserCard"
+import "../../users/User.css"
 
 export const AdminUserList = () => {
   const { getUsers, users } = useContext(UsersContext)

@@ -9,12 +9,12 @@ export const AdminMessageCard = ({ message }) => {
     const { getUsers, users } = useContext(UsersContext)
     const history = useHistory()
 
-    
-    const foundSender = users.find(user => (user.id === message.senderId))
-
     useEffect(() => {
         getUsers()
       }, [])
+    
+    const foundSender = users.find(user => (user.id === message.senderId))
+
     
     const handleDelete = () => {
         deleteMessage(message.id)
