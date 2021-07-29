@@ -21,7 +21,7 @@ export const MessageCard = ({ message }) => {
     
     return (
         <section className="message">
-            {/* <p>From Admin:</p> */}
+            <p>Message from Admin:</p>
             <p>{message.textArea}</p>
             <button id={message.id} onClick={handleDelete}>Delete</button>
         </section>

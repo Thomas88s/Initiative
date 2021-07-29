@@ -2,12 +2,14 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { UserProvider } from "./users/UserProvider"
-import { UserList } from "./users/UserProfile"
-import { AdminUserList } from "./admin/AdminUserList"
+import { UserProfile } from "./users/UserProfile"
+import { AdminUserList } from "./admin/adminUsers/AdminUserList"
+import { AdminUserProfile } from "./admin/adminUsers/AdminUserProfile"
 import { AdminMessageList } from "./admin/AdminMessageList"
+import { AdminServiceList } from "./admin/AdminServiceList"
 import { AdminServiceForm } from "./admin/AdminServiceForm"
 import { MessageProvider } from "./messages/MessageProvider"
-import { MessageList } from "./messages/MessageList"
+import { MessageForm } from "./messages/MessageForm"
 import { ServiceForm } from "./services/ServiceForm"
 import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
@@ -31,7 +33,7 @@ export const ApplicationViews = () => {
                     <TagProvider>
                         <UserProvider>
                             <Route exact path="/users">
-                                <UserList />
+                                <UserProfile />
                                 <UserServiceList />
                                 <UserMessageList />
                             </Route>
@@ -41,22 +43,28 @@ export const ApplicationViews = () => {
             </ServiceProvider>
 
             <MessageProvider>
-                <Route exact path="/messages">
-                    <MessageList />
-                </Route>
+                <UserProvider>
+                    <Route exact path="/messages">
+                        <UserMessageList />
+                        <MessageForm />
+                    </Route>
+                </UserProvider>
             </MessageProvider>
 
             <ServiceProvider>
                 <TagProvider>
-                    <Route exact path="/services">
-                        <ServiceList />
-                    </Route>
-                    <Route path="/services/create">
-                        <ServiceForm />
-                    </Route>
-                    <Route path="/services/edit/:serviceId(\d+)">
-                         <ServiceForm />
-                    </Route>
+                    <UserProvider>
+                        <Route exact path="/services">
+                            <ServiceList />
+                            <UserServiceList />
+                        </Route>
+                        <Route path="/services/create">
+                            <ServiceForm />
+                        </Route>
+                        <Route path="/services/edit/:serviceId(\d+)">
+                            <ServiceForm />
+                        </Route>
+                    </UserProvider>
                 </TagProvider>
             </ServiceProvider>
 
@@ -77,9 +85,7 @@ export const ApplicationViews = () => {
                     <TagProvider>
                         <UserProvider>
                             <Route exact path="/admin/users">
-                                <UserList />
-                                <UserServiceList />
-                                <UserMessageList />
+                                <AdminUserProfile />
                             </Route>
                         </UserProvider>
                     </TagProvider>
@@ -96,16 +102,18 @@ export const ApplicationViews = () => {
 
             <ServiceProvider>
                 <TagProvider>
-                    <Route exact path="/admin/services">
-                        <ServiceList />
-                        <AdminServiceForm />
-                    </Route>
-                    <Route path="/admin/services/create">
-                        <ServiceForm />
-                    </Route>
-                    <Route path="/admin/services/edit/:serviceId(\d+)">
-                         <ServiceForm />
-                    </Route>
+                    <UserProvider>
+                        <Route exact path="/admin/services">
+                            <AdminServiceList />
+                            <AdminServiceForm />
+                        </Route>
+                        <Route path="/admin/services/create">
+                            <ServiceForm />
+                        </Route>
+                        <Route path="/admin/services/edit/:serviceId(\d+)">
+                            <ServiceForm />
+                        </Route>
+                    </UserProvider>
                 </TagProvider>
             </ServiceProvider>
 

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react"
 import { MessageContext } from "./MessageProvider"
 import { MessageCard } from "./MessageCard"
-import { MessageForm } from "./MessageForm"
 import "./Message.css"
 
 export const MessageList = () => {
@@ -21,10 +20,7 @@ export const MessageList = () => {
                     return <MessageCard key={message.id} message={message} />
                 })}
             </div>
-            <div>
-            <h4>Send message to Services</h4>
-                <MessageForm />
-            </div>
+           
         </>
     )
 }

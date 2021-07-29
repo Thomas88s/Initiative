@@ -11,6 +11,7 @@ export const UserMessageList = () => {
     let user = parseInt(sessionStorage.getItem("App_user"))
     let foundMessages = messages.filter(message => (message.receiverId === user)) 
     
+
     useEffect(() => {
         getMessages()
         .then(getUsers())
@@ -25,6 +26,7 @@ export const UserMessageList = () => {
                 {foundMessages.map(message => {
                     return <MessageCard key={message.id} message={message} />
                 })}
+           
             </div>
           
         </>
