@@ -52,7 +52,7 @@ export const ServiceForm = () => {
                     .then(() => history.push("/services"))
             } else {
                 addService({
-                     name: service.name,
+                    name: service.name,
                     textArea: service.textArea,
                     userId: currentUserId})
                     .then(() => history.push("/services"))

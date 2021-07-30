@@ -25,7 +25,8 @@ export const AdminMessageList = () => {
     }, [])
 
     const handleSelectUser = (event) => {
-        if (selectedUser === "") {
+
+        if (selectedUser.value === "0") {
             window.alert("Cannot post blank message")
         } else {
         const selectedUserId = parseInt(event.target.value)
@@ -44,12 +45,13 @@ export const AdminMessageList = () => {
         <>
         <h2>Message Board</h2>
          <div className="form-group">
-              <label htmlFor="userId"></label>
+              <label htmlFor="userId">Search For a User</label>
               <select name="user" id="userId" className="form-control" value={user.id} onChange={handleSelectUser}>
-                <option value="0">Please Select a User</option>
+                <option value="0">User Select...</option>
                 {users.map(user => (
                   <option key={user.id} value={user.id}>
                     {user.name}
+              
                   </option>
                 ))}
               </select>

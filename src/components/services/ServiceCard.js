@@ -1,5 +1,8 @@
 import React, { useContext, useState } from "react"
 import { TagContext } from "../tags/TagProvider"
+import { UsersContext } from "../users/UserProvider"
+// import { ServiceContext } from "../tags/UsersProvider"
+
 import "./Service.css"
 
 export const ServiceCard = ({ service }) => {
@@ -10,16 +13,22 @@ export const ServiceCard = ({ service }) => {
         serviceId: service.id
     })
     
-    const { addTag } = useContext(TagContext)
+    const { addTag, deleteTag, tags } = useContext(TagContext)
     
 
     const handleAdd = (event) => {
         const newTag = { ...tag }
         newTag[event.target.id] = event.target.value
         newTag.serviceId = service.id
+        let serviceId = tag.serviceId
+        let userId = currentUserId
+        const foundTag = tags.find(tag => serviceId === tag.serviceId && userId === tag.userId)
+        if (foundTag) {
+            deleteTag(foundTag.id)
+        } else {
         setTag(newTag)
         addTag(tag)
-            
+        } 
     }
    
 
