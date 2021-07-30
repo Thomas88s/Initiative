@@ -19,7 +19,7 @@ export const MessageForm = () => {
         textArea: "",
         receiverId: 1,
         senderId: currentUserId,
-        timeStamp: ""
+        date: ""
     })
 
     const { messageId } = useParams()
@@ -28,7 +28,7 @@ export const MessageForm = () => {
     const handleControlledInputChange = (event) => {
         const newMessage = { ...message }
         newMessage[event.target.id] = event.target.value
-        newMessage.timeStamp = today
+        newMessage.date = today
         setMessage(newMessage)
     }
 
@@ -41,7 +41,7 @@ export const MessageForm = () => {
                     id: message.id,
                     textArea: message.textArea,
                     senderId: currentUserId,
-                    timeStamp: message.timeStamp
+                    date: message.date
                 })
                     .then(() => history.push("/messages"))
             } else {

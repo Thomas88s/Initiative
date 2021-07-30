@@ -46,9 +46,9 @@ export const AdminUserProfile = () => {
     return (
         <>
     <div className="form-group">
-              <label htmlFor="userId">User: </label>
+              <label htmlFor="userId"></label>
               <select name="user" id="userId" className="form-control" value={user.id} onChange={handleSelectUser}>
-                <option value="0">Select a user</option>
+                <option value="0">Please Select a User</option>
                 {users.map(user => (
                   <option key={user.id} value={user.id}>
                     {user.name}

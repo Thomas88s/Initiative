@@ -22,7 +22,7 @@ export const AdminMessageForm = () => {
         textArea: "",
         senderId: currentUserId,
         receiverId: 0,
-       
+        date: ""
     })
     
     const { messageId } = useParams()
@@ -45,7 +45,7 @@ export const AdminMessageForm = () => {
                     id: message.id,
                     textArea: message.textArea,
                     senderId: currentUserId,
-                    timeStamp: message.timeStamp
+                    date: message.date
                 })
                     .then(() => history.push("/messages"))
             } else {
@@ -53,7 +53,7 @@ export const AdminMessageForm = () => {
                     textArea: message.textArea,
                     senderId: currentUserId,
                     receiverId: parseInt(message.receiverId),
-                    timeStamp: today
+                    date: today
                 })
                     .then(() => setMessage({ textArea: "",
                     senderId: currentUserId,
@@ -65,7 +65,7 @@ export const AdminMessageForm = () => {
     return (
 
         <form className="messageForm">
-            <h2>Message Board</h2>
+            <h2>Send A Message</h2>
             <fieldset>
                 <div className="form-group">
                 <label htmlFor="receiver">Send Message to:</label>
@@ -79,7 +79,7 @@ export const AdminMessageForm = () => {
               </select>
                 </div>
                 <div className="form-group">
-                    <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
+                    <textarea type="text" id="textArea1" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
             </fieldset>
             <button className="btn btn-primary"
