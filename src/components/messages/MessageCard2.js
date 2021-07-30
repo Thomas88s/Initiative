@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import { MessageContext } from "./MessageProvider"
 import "./Message.css"
 
-export const MessageCard = ({ message }) => {
+export const MessageCard2 = ({ message }) => {
     const { deleteMessage } = useContext(MessageContext)
     const history = useHistory()
     
@@ -20,7 +20,7 @@ export const MessageCard = ({ message }) => {
     
     return (
         <section className="message">
-            <p>From Admin:</p>
+            <p>To Admin:</p>
             <p>{message.textArea}</p>
             <button id={message.id} onClick={handleDelete}>Delete</button>
         </section>

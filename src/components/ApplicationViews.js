@@ -15,7 +15,8 @@ import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
 import { TagProvider } from "./tags/TagProvider"
 import { UserServiceList } from "./users/UserServices"
-import { UserMessageList } from "./users/UserMessageList"
+import { UserSentMessageList } from "./users/UserSentMessageList"
+import { UserReceivedMessageList } from "./users/UserReceivedMessageList"
 
 
 
@@ -35,7 +36,7 @@ export const ApplicationViews = () => {
                             <Route exact path="/users">
                                 <UserProfile />
                                 <UserServiceList />
-                                <UserMessageList />
+                                <UserReceivedMessageList />
                             </Route>
                         </UserProvider>
                     </TagProvider>
@@ -45,7 +46,8 @@ export const ApplicationViews = () => {
             <MessageProvider>
                 <UserProvider>
                     <Route exact path="/messages">
-                        <UserMessageList />
+                        <UserSentMessageList />
+                        <UserReceivedMessageList />
                         <MessageForm />
                     </Route>
                 </UserProvider>

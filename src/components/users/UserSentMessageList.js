@@ -1,15 +1,16 @@
 import React, { useContext, useEffect } from "react"
 import { MessageContext } from "../messages/MessageProvider"
 import { UsersContext } from "./UserProvider"
-import { MessageCard } from "../messages/MessageCard"
+import { MessageCard2 } from "../messages/MessageCard2"
 import "../messages/Message.css"
 
-export const UserMessageList = () => {
+export const UserSentMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
     const { getUsers } = useContext(UsersContext)
 
     let user = parseInt(sessionStorage.getItem("App_user"))
-    let foundMessages = messages.filter(message => (message.receiverId === user)) 
+    let foundSentMessages = messages.filter(message => (message.senderId === user))
+
     
 
     useEffect(() => {
@@ -18,17 +19,17 @@ export const UserMessageList = () => {
        
     }, [])
 
-
     return (
         <>
-            <h2>Message Board</h2>
+            <h2>Sent Messages</h2>
             <div className="messages">
-                {foundMessages.map(message => {
-                    return <MessageCard key={message.id} message={message} />
+                {foundSentMessages.map(message => {
+                    return <MessageCard2 key={message.id} message={message} />
                 })}
            
             </div>
           
         </>
     )
+
 }
