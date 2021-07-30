@@ -1,14 +1,15 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect } from "react"
 import { MessageContext } from "../../messages/MessageProvider"
 import { UsersContext } from "../../users/UserProvider"
 import { AdminMessageCard } from "./AdminMessageCard"
-import { AdminMessageForm } from "./AdminMessageForm"
 import "../../messages/Message.css"
 
-export const AdminHomeMessageList = () => {
+export const AdminHomeReceivedMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
     const { getUsers } = useContext(UsersContext)
-    
+    let user = parseInt(sessionStorage.getItem("App_user"))
+    let foundReceivedMessages = messages.filter(message => (message.receiverId === user)) 
+   
 
     useEffect(() => {
         getUsers()
@@ -18,12 +19,13 @@ export const AdminHomeMessageList = () => {
 
     
 
-    let sortedMessages = messages.sort((a,b) => {
+    let sortedMessages = foundReceivedMessages.sort((a,b) => {
         return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
       })
       
       return (
         <>
+        <h2>Messages Received</h2>
           <div className="messages">
                 {sortedMessages.map(message => {
                     return <AdminMessageCard key={message.id} message={message} />

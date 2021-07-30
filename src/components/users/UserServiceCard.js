@@ -1,20 +1,16 @@
 import React, { useContext } from "react"
-import { ServiceContext } from "../services/ServiceProvider"
+import { TagContext } from "../tags/TagProvider"
 import "../services/Service.css"
 
 export const UserServiceCard = ({ service }) => {
-    const { deleteService } = useContext(ServiceContext)
-    
-    
-    
-    
+    const { deleteTag, tags} = useContext(TagContext)
+    let foundTag = tags.find(tag => tag.serviceId === service.id) 
     
     const handleDelete = () => {
-        deleteService(service.id)
+        deleteTag(foundTag.id)
            
     }
    
-
     return (
         <section className="service">
             <div className="service_Name">{service.name}</div>
