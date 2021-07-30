@@ -6,17 +6,18 @@ import { UserProfile } from "./users/UserProfile"
 import { AdminUserList } from "./admin/adminUsers/AdminUserList"
 import { AdminUserProfile } from "./admin/adminUsers/AdminUserProfile"
 import { AdminMessageList } from "./admin/adminMessages/AdminMessageList"
-import { AdminHomeMessageList } from "./admin/adminMessages/AdminHomeMessages"
+import { AdminHomeReceivedMessageList } from "./admin/adminMessages/AdminHomeReceivedMessages"
+import { AdminHomeSentMessageList } from "./admin/adminMessages/AdminHomeSentMessages"
 import { AdminServiceList } from "./admin/adminServices/AdminServiceList"
 import { AdminServiceForm } from "./admin/adminServices/AdminServiceForm"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageForm } from "./messages/MessageForm"
 import { ServiceForm } from "./services/ServiceForm"
-
 import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
 import { TagProvider } from "./tags/TagProvider"
 import { UserServiceList } from "./users/UserServices"
+import { UserProfileServiceList } from "./users/UserProfileServices"
 import { UserSentMessageList } from "./users/UserSentMessageList"
 import { UserReceivedMessageList } from "./users/UserReceivedMessageList"
 
@@ -37,7 +38,7 @@ export const ApplicationViews = () => {
                         <UserProvider>
                             <Route exact path="/users">
                                 <UserProfile />
-                                <UserServiceList />
+                                <UserProfileServiceList />
                                 <UserReceivedMessageList />
                             </Route>
                         </UserProvider>
@@ -75,9 +76,10 @@ export const ApplicationViews = () => {
             <UserProvider>
                 <ServiceProvider>
                     <MessageProvider>
-                        <Route exact path="/admin">
+                        <Route exact path="/admin7HmKXhQsrnTpYflD">
                             <AdminUserList />
-                             <AdminHomeMessageList />
+                             <AdminHomeReceivedMessageList />
+                             <AdminHomeSentMessageList />
                             <ServiceForm />
                         </Route>
                     </MessageProvider>
@@ -88,7 +90,7 @@ export const ApplicationViews = () => {
                 <MessageProvider>
                     <TagProvider>
                         <UserProvider>
-                            <Route exact path="/admin/users">
+                            <Route exact path="/admin/usersTdu8ngstqVzhP4D9">
                                 <AdminUserProfile />
                             </Route>
                         </UserProvider>
@@ -98,7 +100,7 @@ export const ApplicationViews = () => {
 
             <UserProvider>
                 <MessageProvider>
-                    <Route path="/admin/messages">
+                    <Route path="/admin/messages1sZY5bgG04Pw7aws">
                         <AdminMessageList />
                     </Route>
                 </MessageProvider>
@@ -107,7 +109,7 @@ export const ApplicationViews = () => {
             <ServiceProvider>
                 <TagProvider>
                     <UserProvider>
-                        <Route exact path="/admin/services">
+                        <Route exact path="/admin/services0sH0AOSszsP5GEUh">
                             <AdminServiceList />
                             <AdminServiceForm />
                         </Route>

@@ -1,8 +1,5 @@
 import React, { useContext, useState } from "react"
 import { TagContext } from "../tags/TagProvider"
-import { UsersContext } from "../users/UserProvider"
-// import { ServiceContext } from "../tags/UsersProvider"
-
 import "./Service.css"
 
 export const ServiceCard = ({ service }) => {

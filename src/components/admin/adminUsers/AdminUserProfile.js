@@ -34,7 +34,7 @@ export const AdminUserProfile = () => {
     const handleSelectUser = (event) => {
         if (selectedUser === "") {
             window.alert("Cannot post blank message")
-        } else {
+        } else if (event.target.value !== "0"){
         const selectedUserId = parseInt(event.target.value)
         const foundUser = users.find(user => user.id === selectedUserId)
         setSelectedUser(foundUser)
