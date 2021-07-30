@@ -50,13 +50,16 @@ export const AdminServiceForm = () => {
                     
                 })
                 .then(() => history.push("/services"))
-                controlEvent.preventDefault() 
+               
             } else {
                 addService({
                     id: service.id,
                     name: service.name,
                     textArea: service.textArea,
                     userId: currentUserId})
+                    .then(() => setService({  name: "",
+                    textArea: "",
+                    userId: currentUserId }))
             }
         }
         useEffect(() => {
