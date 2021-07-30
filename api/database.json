@@ -291,6 +291,11 @@
       "userId": 1,
       "serviceId": 14,
       "id": 18
+    },
+    {
+      "userId": 3,
+      "serviceId": 14,
+      "id": 19
     }
   ],
   "newsletter": [
