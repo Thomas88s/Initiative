@@ -11,7 +11,9 @@ export const UserSentMessageList = () => {
     let user = parseInt(sessionStorage.getItem("App_user"))
     let foundSentMessages = messages.filter(message => (message.senderId === user))
 
-    
+    let sortedMessages = foundSentMessages.sort((a,b) => {
+        return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
+      })
 
     useEffect(() => {
         getMessages()
@@ -23,7 +25,7 @@ export const UserSentMessageList = () => {
         <>
             <h2>Sent Messages</h2>
             <div className="messages">
-                {foundSentMessages.map(message => {
+                {sortedMessages.map(message => {
                     return <MessageCard2 key={message.id} message={message} />
                 })}
            

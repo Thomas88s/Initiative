@@ -11,12 +11,15 @@ export const MessageList = () => {
 
     }, [])
 
+    let sortedMessages = messages.sort((a,b) => {
+        return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
+      })
 
     return (
         <>
             <h2>Message Board</h2>
             <div className="messages">
-                {messages.map(message => {
+                {sortedMessages.map(message => {
                     return <MessageCard key={message.id} message={message} />
                 })}
             </div>

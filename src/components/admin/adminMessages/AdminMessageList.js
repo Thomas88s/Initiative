@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { MessageContext } from "../../messages/MessageProvider"
 import { UsersContext } from "../../users/UserProvider"
 import { AdminMessageCard } from "./AdminMessageCard"
@@ -7,8 +7,16 @@ import "../../messages/Message.css"
 
 export const AdminMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
-    const { getUsers } = useContext(UsersContext)
-   
+    const { getUsers, users, getUserById } = useContext(UsersContext)
+    const user = getUserById
+
+    const [selectedUser, setSelectedUser] = useState({
+        name: "",
+        address: "",
+        phoneNumber: "",
+        birthDate: "",
+        
+    });
    
     useEffect(() => {
         getUsers()
@@ -16,12 +24,39 @@ export const AdminMessageList = () => {
         
     }, [])
 
+    const handleSelectUser = (event) => {
+        if (selectedUser === "") {
+            window.alert("Cannot post blank message")
+        } else {
+        const selectedUserId = parseInt(event.target.value)
+        const foundUser = users.find(user => user.id === selectedUserId)
+        setSelectedUser(foundUser)
+    }}
+
+    let foundMessages = messages.filter(message => (message.receiverId === selectedUser.id))
+
+    let sortedMessages = foundMessages.sort((a,b) => {
+        return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
+      })
+
 
     return (
         <>
-            <h2>Message Board</h2>
+        <h2>Message Board</h2>
+         <div className="form-group">
+              <label htmlFor="userId"></label>
+              <select name="user" id="userId" className="form-control" value={user.id} onChange={handleSelectUser}>
+                <option value="0">Please Select a User</option>
+                {users.map(user => (
+                  <option key={user.id} value={user.id}>
+                    {user.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+ 
             <div className="messages">
-                {messages.map(message => {
+                {sortedMessages.map(message => {
                     return <AdminMessageCard key={message.id} message={message} />
                 })}
                 <AdminMessageForm />

@@ -6,11 +6,13 @@ import { UserProfile } from "./users/UserProfile"
 import { AdminUserList } from "./admin/adminUsers/AdminUserList"
 import { AdminUserProfile } from "./admin/adminUsers/AdminUserProfile"
 import { AdminMessageList } from "./admin/adminMessages/AdminMessageList"
+import { AdminHomeMessageList } from "./admin/adminMessages/AdminHomeMessages"
 import { AdminServiceList } from "./admin/adminServices/AdminServiceList"
 import { AdminServiceForm } from "./admin/adminServices/AdminServiceForm"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageForm } from "./messages/MessageForm"
 import { ServiceForm } from "./services/ServiceForm"
+
 import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
 import { TagProvider } from "./tags/TagProvider"
@@ -75,7 +77,7 @@ export const ApplicationViews = () => {
                     <MessageProvider>
                         <Route exact path="/admin">
                             <AdminUserList />
-                            <AdminMessageList />
+                             <AdminHomeMessageList />
                             <ServiceForm />
                         </Route>
                     </MessageProvider>
