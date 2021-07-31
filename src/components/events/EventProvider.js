@@ -1,19 +1,20 @@
 import React, { useState, createContext } from "react"
 
-export const EventContext = createContext()
+ export const EventContext = createContext()
 
-export const EventProvider = (props) => {
+ export const EventProvider = (props) => {
     const [events, setEvents] = useState([])
+
     const getEvents = () => {
         return fetch("http://localhost:8088/events")
-            .then(res => res.json())
-            .then(setEvents)
+        .then(res => res.json())
+        .then(setEvents)
     }
-
     const getEventById = (id) => {
         return fetch(`http://localhost:8088/events/${id}`)
-            .then(res => res.json())
-    }
+        .then(res => res.json())
+        }
+
 
     const addEvent = eventObj => {
         return fetch("http://localhost:8088/events", {
@@ -23,7 +24,8 @@ export const EventProvider = (props) => {
             },
             body: JSON.stringify(eventObj)
         })
-            .then(getEvents)
+        .then(getEvents)
+          
     }
 
     const deleteEvent = eventId => {
@@ -33,20 +35,22 @@ export const EventProvider = (props) => {
             .then(getEvents)
     }
 
-    const editEvent = event => {
+    const updateEvent = event => {
         return fetch(`http://localhost:8088/events/${event.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(event)
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(event)
         })
-            .then(getEvents)
-    }
+          .then(getEvents)
+      }
+
+    
 
     return (
         <EventContext.Provider value={{
-            events, getEvents, getEventById, addEvent, deleteEvent, editEvent
+            events, getEvents, addEvent, deleteEvent, updateEvent,  getEventById
         }}>
             {props.children}
         </EventContext.Provider>

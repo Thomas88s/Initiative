@@ -10,6 +10,9 @@ import { AdminHomeReceivedMessageList } from "./admin/adminMessages/AdminHomeRec
 import { AdminHomeSentMessageList } from "./admin/adminMessages/AdminHomeSentMessages"
 import { AdminServiceList } from "./admin/adminServices/AdminServiceList"
 import { AdminServiceForm } from "./admin/adminServices/AdminServiceForm"
+import { AdminEventForm } from "./admin/adminEvents/AdminEventForm"
+import { AdminEventList } from "./admin/adminEvents/AdminEventList"
+import { EventProvider } from "./events/EventProvider"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageForm } from "./messages/MessageForm"
 import { ServiceForm } from "./services/ServiceForm"
@@ -122,7 +125,18 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </TagProvider>
             </ServiceProvider>
-
+            <EventProvider>
+                        <Route exact path="/admin/eventsrs77fUxqPmQtJEdz">
+                            <AdminEventList />
+                            <AdminEventForm />
+                        </Route>
+                        <Route path="/admin/events/create">
+                            <AdminEventForm />
+                        </Route>
+                        <Route path="/admin/events/edit/:eventId(\d+)">
+                            <AdminEventForm />
+                        </Route>
+            </EventProvider>
         </>
     )
 }
