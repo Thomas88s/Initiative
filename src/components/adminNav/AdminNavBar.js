@@ -2,6 +2,19 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 
+const handleExit = (event) => {
+    // Save data to sessionStorage
+sessionStorage.setItem('key', 'value');
+
+// Get saved data from sessionStorage
+let data = sessionStorage.getItem('key');
+
+// Remove saved data from sessionStorage
+sessionStorage.removeItem('key');
+
+// Remove all saved data from sessionStorage
+sessionStorage.clear(data);
+}
 
 export const AdminNavBar = (props) => {
   return (
@@ -35,7 +48,9 @@ export const AdminNavBar = (props) => {
           <Link className="nav-link" to="/services">User Services</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/login">Sign Out</Link>
+          <Link className="nav-link" to="/login" onClick={event => {
+                    handleExit()
+                }}>Sign Out</Link>
         </li>
       </ul>
     </nav>

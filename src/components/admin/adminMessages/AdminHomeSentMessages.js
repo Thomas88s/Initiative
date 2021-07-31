@@ -9,20 +9,16 @@ export const AdminHomeSentMessageList = () => {
     const { getUsers } = useContext(UsersContext)
     let user = parseInt(sessionStorage.getItem("App_user"))
     let foundSentMessages = messages.filter(message => (message.senderId === user)) 
-   
-
-    useEffect(() => {
-        getUsers()
-        .then(getMessages())
-        
-    }, [])
-
-    
-
     let sortedMessages = foundSentMessages.sort((a,b) => {
         return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
       })
-      
+
+    useEffect(() => {
+        getUsers()
+        .then(getMessages)
+        
+    }, [])
+
       return (
         <>
         <h2>Sent Messages</h2>
