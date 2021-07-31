@@ -4,13 +4,13 @@ import "./Service.css"
 
 export const ServiceCard = ({ service }) => {
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
+    const { addTag, deleteTag, tags } = useContext(TagContext)
     
     const [tag, setTag] = useState({
         userId: currentUserId,
         serviceId: service.id
     })
     
-    const { addTag, deleteTag, tags } = useContext(TagContext)
     
 
     const handleAdd = (event) => {

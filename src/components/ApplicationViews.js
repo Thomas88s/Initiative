@@ -12,6 +12,7 @@ import { AdminServiceList } from "./admin/adminServices/AdminServiceList"
 import { AdminServiceForm } from "./admin/adminServices/AdminServiceForm"
 import { AdminEventForm } from "./admin/adminEvents/AdminEventForm"
 import { AdminEventList } from "./admin/adminEvents/AdminEventList"
+import { EventList } from "./events/EventList"
 import { EventProvider } from "./events/EventProvider"
 import { MessageProvider } from "./messages/MessageProvider"
 import { MessageForm } from "./messages/MessageForm"
@@ -19,10 +20,14 @@ import { ServiceForm } from "./services/ServiceForm"
 import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
 import { TagProvider } from "./tags/TagProvider"
+import { EventTagProvider } from "./tags/EventTagProvider"
 import { UserServiceList } from "./users/UserServices"
+import { UserEventList } from "./users/UserEvents"
 import { UserProfileServiceList } from "./users/UserProfileServices"
 import { UserSentMessageList } from "./users/UserSentMessageList"
 import { UserReceivedMessageList } from "./users/UserReceivedMessageList"
+import { UserProfileEventList } from "./users/UserProfileEvents"
+
 
 
 
@@ -34,18 +39,22 @@ export const ApplicationViews = () => {
             <Route exact path="/">
                 <Home />
             </Route>
-
             <ServiceProvider>
                 <MessageProvider>
-                    <TagProvider>
-                        <UserProvider>
-                            <Route exact path="/users">
-                                <UserProfile />
-                                <UserProfileServiceList />
-                                <UserReceivedMessageList />
-                            </Route>
-                        </UserProvider>
-                    </TagProvider>
+                    <EventProvider>
+                        <TagProvider>
+                            <EventTagProvider>
+                                <UserProvider>
+                                    <Route exact path="/users">
+                                        <UserProfile />
+                                        <UserProfileServiceList />
+                                        <UserReceivedMessageList />
+                                        <UserProfileEventList />
+                                    </Route>
+                                </UserProvider>
+                            </EventTagProvider>
+                        </TagProvider>
+                    </EventProvider>
                 </MessageProvider>
             </ServiceProvider>
 
@@ -66,15 +75,23 @@ export const ApplicationViews = () => {
                             <ServiceList />
                             <UserServiceList />
                         </Route>
-                        <Route path="/services/create">
-                            <ServiceForm />
-                        </Route>
-                        <Route path="/services/edit/:serviceId(\d+)">
-                            <ServiceForm />
-                        </Route>
                     </UserProvider>
                 </TagProvider>
             </ServiceProvider>
+
+                        <Route exact path="/news">
+                        </Route>
+
+            <EventProvider>
+                <EventTagProvider>
+                    <UserProvider>
+                            <Route exact path="/events">
+                                <EventList />
+                                <UserEventList />
+                            </Route>
+                    </UserProvider>
+                </EventTagProvider>
+            </EventProvider>            
 
             <UserProvider>
                 <ServiceProvider>
@@ -83,7 +100,6 @@ export const ApplicationViews = () => {
                             <AdminUserList />
                              <AdminHomeReceivedMessageList />
                              <AdminHomeSentMessageList />
-                            <ServiceForm />
                         </Route>
                     </MessageProvider>
                 </ServiceProvider>    
@@ -125,15 +141,16 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </TagProvider>
             </ServiceProvider>
+
             <EventProvider>
                         <Route exact path="/admin/eventsrs77fUxqPmQtJEdz">
                             <AdminEventList />
                             <AdminEventForm />
                         </Route>
-                        <Route path="/admin/events/create">
+                        <Route path="/events/create">
                             <AdminEventForm />
                         </Route>
-                        <Route path="/admin/events/edit/:eventId(\d+)">
+                        <Route path="/events/edit/:eventId(\d+)">
                             <AdminEventForm />
                         </Route>
             </EventProvider>

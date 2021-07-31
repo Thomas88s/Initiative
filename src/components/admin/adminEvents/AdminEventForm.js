@@ -49,7 +49,7 @@ export const AdminEventForm = () => {
                 description: event.description
                 
             })
-            .then(() => history.push("/events"))
+            .then(() => history.push("/admin/eventsrs77fUxqPmQtJEdz"))
           } else {
            
             addEvent({

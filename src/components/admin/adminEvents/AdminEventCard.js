@@ -23,7 +23,7 @@
           <div className="eventLocation">Location:  {event.location}</div>
           <div className="eventDescription">Details:  {event.description}</div>
 
-          <button onClick={() => {
+          <button className="eventButton" onClick={() => {
                history.push(`/events/edit/${event.id}`)
            }}>Edit</button>
           <button onClick={handleRelease}>Delete Event</button>
