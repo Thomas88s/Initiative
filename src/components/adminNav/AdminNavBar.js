@@ -20,6 +20,12 @@ export const AdminNavBar = (props) => {
           <Link className="nav-link" to="/admin/services0sH0AOSszsP5GEUh">Services</Link>
         </li>  
         <li className="nav-item">
+          <Link className="nav-link" to="/admin/eventsrs77fUxqPmQtJEdz">Events</Link>
+        </li>  
+        <li className="nav-item">
+          <Link className="nav-link" to="/admin/newsLettersBctGSb59aC7uZPQW">newsLetter</Link>
+        </li>  
+        <li className="nav-item">
           <Link className="nav-link" to="">Users Home</Link>
         </li>
         <li className="nav-item">
