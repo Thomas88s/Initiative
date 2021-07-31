@@ -121,8 +121,14 @@
     },
     {
       "id": 16,
-      "name": "hippy happy ",
+      "name": "hippy happy",
       "textArea": "all indians and no chiefs",
+      "userId": 1
+    },
+    {
+      "id": 17,
+      "name": "newest service",
+      "textArea": "services0sH0AOgets0sH0AOSszsP5GEUh",
       "userId": 1
     }
   ],
@@ -254,7 +260,7 @@
       "id": 9
     }
   ],
-  "newsletter": [
+  "newsLetter": [
     {
       "id": 1,
       "name": "newsletter 1",

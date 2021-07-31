@@ -11,7 +11,7 @@ export const AdminMessageCard2 = ({ message }) => {
         getUsers()
       }, [])
     
-    const foundSender = users.find(user => (user.id === message.senderId))
+    const foundReceiver = users.find(user => (user.id === message.receiverId))
 
     
     const handleDelete = () => {
@@ -24,6 +24,7 @@ export const AdminMessageCard2 = ({ message }) => {
     return (
         <section className="message">
             <p>{message.textArea}</p>
+            <p>Sent To: {foundReceiver?.name}</p>
             <p>{message.date}</p>
             <button id={message.id} onClick={handleDelete}>Delete</button>
         </section>

@@ -49,7 +49,7 @@ export const ServiceForm = () => {
                     userId: currentUserId
                    
                 })
-                    .then(() => history.push("/services"))
+                    .then(() => history.push("/admin/services0sH0AOSszsP5GEUh"))
             } else {
                 addService({
                     name: service.name,
