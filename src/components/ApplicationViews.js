@@ -10,8 +10,11 @@ import { AdminHomeReceivedMessageList } from "./admin/adminMessages/AdminHomeRec
 import { AdminHomeSentMessageList } from "./admin/adminMessages/AdminHomeSentMessages"
 import { AdminServiceList } from "./admin/adminServices/AdminServiceList"
 import { AdminServiceForm } from "./admin/adminServices/AdminServiceForm"
-import { AdminEventForm } from "./admin/adminEvents/AdminEventForm"
 import { AdminEventList } from "./admin/adminEvents/AdminEventList"
+import { AdminEventForm } from "./admin/adminEvents/AdminEventForm"
+import { AdminNewsList } from "./admin/adminNewsLetters/AdminNewsList"
+import { AdminNewsForm } from "./admin/adminNewsLetters/AdminNewsForm"
+import { NewsLetterProvider } from "./newsLetters/NewsLetterProvider"
 import { EventList } from "./events/EventList"
 import { EventProvider } from "./events/EventProvider"
 import { MessageProvider } from "./messages/MessageProvider"
@@ -129,13 +132,13 @@ export const ApplicationViews = () => {
                 <TagProvider>
                     <UserProvider>
                         <Route exact path="/admin/services0sH0AOSszsP5GEUh">
-                            <AdminServiceList />
                             <AdminServiceForm />
+                            <AdminServiceList />
                         </Route>
                         <Route path="/admin/services/create">
                             <ServiceForm />
                         </Route>
-                        <Route path="/admin/services/edit/:serviceId(\d+)">
+                        <Route path="/services/edit/:serviceId(\d+)">
                             <ServiceForm />
                         </Route>
                     </UserProvider>
@@ -154,6 +157,19 @@ export const ApplicationViews = () => {
                             <AdminEventForm />
                         </Route>
             </EventProvider>
+            
+            <NewsLetterProvider>
+                        <Route exact path="/admin/newsLettersBctGSb59aC7uZPQW">
+                            <AdminNewsList />
+                            <AdminNewsForm />
+                        </Route>
+                        <Route path="/newsLetters/create">
+                            <AdminNewsForm />
+                        </Route>
+                        <Route path="/newsLetters/edit/:newsId(\d+)">
+                            <AdminNewsForm />
+                        </Route>
+            </NewsLetterProvider>
         </>
     )
 }
