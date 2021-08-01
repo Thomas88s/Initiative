@@ -1,4 +1,4 @@
-import React, { useContext }from "react"
+  import React, { useContext }from "react"
   import { NewsContext } from "../../newsLetters/NewsLetterProvider"
   import { useHistory } from "react-router-dom"
   import "../../newsLetters/NewsLetter.css"
@@ -24,7 +24,7 @@ import React, { useContext }from "react"
           <button className="eventButton" onClick={() => {
                history.push(`/newsLetters/edit/${news.id}`)
            }}>Edit</button>
-          <button onClick={handleRelease}>Delete Event</button>
+          <button onClick={handleRelease}>Delete Article</button>
       </section>
    )
   }
