@@ -14,7 +14,6 @@ import { AdminEventList } from "./admin/adminEvents/AdminEventList"
 import { AdminEventForm } from "./admin/adminEvents/AdminEventForm"
 import { AdminNewsList } from "./admin/adminNewsLetters/AdminNewsList"
 import { AdminNewsForm } from "./admin/adminNewsLetters/AdminNewsForm"
-import { NewsLetterProvider } from "./newsLetters/NewsLetterProvider"
 import { EventList } from "./events/EventList"
 import { EventProvider } from "./events/EventProvider"
 import { MessageProvider } from "./messages/MessageProvider"
@@ -22,6 +21,8 @@ import { MessageForm } from "./messages/MessageForm"
 import { ServiceForm } from "./services/ServiceForm"
 import { ServiceList } from "./services/ServiceList"
 import { ServiceProvider } from "./services/ServiceProvider"
+import { NewsList } from "./newsLetters/NewsLetterList"
+import { NewsLetterProvider } from "./newsLetters/NewsLetterProvider"
 import { TagProvider } from "./tags/TagProvider"
 import { EventTagProvider } from "./tags/EventTagProvider"
 import { UserServiceList } from "./users/UserServices"
@@ -81,9 +82,11 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </TagProvider>
             </ServiceProvider>
-
-                        <Route exact path="/news">
+                    <NewsLetterProvider>
+                        <Route exact path="/newsLetters">
+                            <NewsList />
                         </Route>
+                    </NewsLetterProvider>
 
             <EventProvider>
                 <EventTagProvider>
