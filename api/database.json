@@ -30,16 +30,16 @@
   ],
   "services": [
     {
-      "name": "great service 1",
-      "textArea": "great service 1",
-      "userId": 1,
-      "id": 1
+      "id": 1,
+      "name": "great service ",
+      "textArea": "great service ",
+      "userId": 1
     },
     {
-      "name": "great service 1",
-      "textArea": "great service 1",
-      "userId": 1,
-      "id": 2
+      "id": 2,
+      "name": "great service 2",
+      "textArea": "great service 2",
+      "userId": 1
     },
     {
       "name": "happy service time",
@@ -283,15 +283,11 @@
     },
     {
       "userId": 3,
-      "eventId": 4,
-      "id": 5
-    },
-    {
-      "userId": 3,
       "eventId": 1,
       "id": 6
     }
   ],
+  "MessageTags": [],
   "newsLetters": [
     {
       "id": 1,
@@ -299,6 +295,12 @@
       "userId": 1,
       "date": "11-11-1212",
       "textArea": "HELLO WORLD?"
+    },
+    {
+      "title": "#3 Ordering and styling",
+      "date": "2021-08-20",
+      "textArea": "HHHhhhheeeellllloooooooooo ",
+      "id": 2
     }
   ]
 }

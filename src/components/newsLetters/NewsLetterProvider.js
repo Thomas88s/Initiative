@@ -1,55 +1,55 @@
 import React, { useState, createContext } from "react"
 
-export const NewsLetterContext = createContext()
+export const NewsContext = createContext()
 
-export const ServiceProvider = (props) => {
-    const [newsLetters, setNewsLetters] = useState([])
+export const NewsLetterProvider = (props) => {
+    const [news, setNews] = useState([])
 
-    const getNewsletter = () => {
+    const getNews = () => {
         return fetch("http://localhost:8088/newsLetters")
             .then(res => res.json())
-            .then(setNewsLetters)
+            .then(setNews)
     }
 
-    const getNewsLetterById = (id) => {
+    const getNewsById = (id) => {
         return fetch(`http://localhost:8088/newsLetters/${id}`)
             .then(res => res.json())
     }
 
-    const addNewsLetter = serviceObj => {
+    const addNews = newsObj => {
         return fetch("http://localhost:8088/newsLetters", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(serviceObj)
+            body: JSON.stringify(newsObj)
         })
-            .then(getNewsletter)
+            .then(getNews)
     }
 
-    const deleteNewsLetter = newsLetterId => {
-        return fetch(`http://localhost:8088/newsLetters/${newsLetterId}`, {
+    const deleteNews = newsId => {
+        return fetch(`http://localhost:8088/newsLetters/${newsId}`, {
             method: "DELETE"
         })
-            .then(getNewsletter)
+            .then(getNews)
     }
 
-    const editNewsLetter = newsLetter => {
-        return fetch(`http://localhost:8088/newsLetters/${newsLetter.id}`, {
+    const editNews = news => {
+        return fetch(`http://localhost:8088/newsLetters/${news.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newsLetter)
+            body: JSON.stringify(news)
         })
-            .then(getNewsletter)
+            .then(getNews)
     }
 
     return (
-        <NewsLetterContext.Provider value={{
-            newsLetters, getNewsletter, getNewsLetterById, addNewsLetter, deleteNewsLetter, editNewsLetter
+        <NewsContext.Provider value={{
+            news, getNews, getNewsById, addNews, deleteNews, editNews
         }}>
             {props.children}
-        </NewsLetterContext.Provider>
+        </NewsContext.Provider>
     )
 }

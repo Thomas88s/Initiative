@@ -20,7 +20,6 @@ export const UserServiceList = () => {
         getUsers()
         .then(getTags())
         .then(getServices())
-        console.log(foundTags)
     }, [])
 
 
