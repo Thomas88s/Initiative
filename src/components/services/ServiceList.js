@@ -14,6 +14,7 @@ export const ServiceList = () => {
 
     return (
         <>
+        <div className="serviceList">
             <h2>Service Board</h2>
             <div className="services">
                 {services.map(service => {
@@ -23,6 +24,7 @@ export const ServiceList = () => {
             <div>
                
             </div>
+        </div>
         </>
     )
 }    

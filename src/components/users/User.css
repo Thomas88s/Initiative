@@ -1,4 +1,4 @@
-/* .users {
+.users {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -9,4 +9,41 @@
       margin: 1em;
       padding: 1em;
       border: 1px solid goldenrod;
-  } */
+  }
+
+  .userServices {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+  }
+
+  .userReceivedMessages {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+  }
+
+  .userSentMessages {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+  }
+
+  .userEvents {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+  }
+
+  .userNews {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+  }
+
+

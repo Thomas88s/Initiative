@@ -27,7 +27,7 @@ export const MessageTagProvider = (props) => {
             .then(getMessageTags)
     }
 
-    const deleteMessageTag = eventTagId => {
+    const deleteMessageTag = messageTagId => {
         return fetch(`http://localhost:8088/messageTags/${messageTagId}`, {
             method: "DELETE"
         })

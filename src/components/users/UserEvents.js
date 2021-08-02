@@ -26,12 +26,14 @@ export const UserEventList = () => {
 
     return (
         <>
+        <div className="userSubscribedEvents">
             <h2>User Events</h2>
             <div className="events">
                 {foundEventTags.map(event => {
                     return <UserEventCard key={event.event.id} event={event.event} />
                 })}
             </div>
+        </div>
         </>
     )
 }    

@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { MessageContext } from "../messages/MessageProvider"
 import { UsersContext } from "./UserProvider"
 import { MessageCard } from "../messages/MessageCard"
-import "../messages/Message.css"
+import "./User.css"
 
 export const UserReceivedMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
@@ -24,7 +24,8 @@ export const UserReceivedMessageList = () => {
 
     
     return (
-        <>
+        <> 
+        <div className="userReceivedMessages">
             <h2>Messages Received</h2>
             <div className="messages">
                 {sortedMessages.map(message => {
@@ -32,6 +33,7 @@ export const UserReceivedMessageList = () => {
                 })}
            
             </div>
+        </div>
           
         </>
     )

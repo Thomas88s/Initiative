@@ -13,6 +13,7 @@ useEffect(() => {
 
   return (
      <>
+     <div className="eventList">
     <div className="events">
       <h3>Events</h3>
       {
@@ -23,6 +24,7 @@ useEffect(() => {
         })
       }
     </div>
+     </div>
    </> 
   )
 }
