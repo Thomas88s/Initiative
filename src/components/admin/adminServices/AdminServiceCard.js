@@ -12,7 +12,9 @@ export const AdminServiceCard = ({ service }) => {
     
     const handleDelete = () => {
         deleteService(service.id)
-        
+        .then(() => {
+            history.push("/admin/services0sH0AOSszsP5GEUh")
+          })
     }
    
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { MessageContext } from "../../messages/MessageProvider";
 import { UsersContext } from "../../users/UserProvider";
 import { useHistory, useParams } from "react-router-dom";
@@ -13,8 +13,8 @@ today = mm + '/' + dd + '/' + yyyy;
 
 
 export const AdminMessageForm = () => {
-    const { addMessage, editMessage } = useContext(MessageContext)
-    const { users } = useContext(UsersContext)
+    const { addMessage, editMessage, getMessages } = useContext(MessageContext)
+    const { users, getUsers } = useContext(UsersContext)
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
     
     
@@ -24,6 +24,12 @@ export const AdminMessageForm = () => {
         receiverId: 0,
         date: ""
     })
+
+    useEffect(() => {
+        getMessages()
+        .then(getUsers())
+    }, [])
+  
     
     const { messageId } = useParams()
     const history = useHistory()
@@ -79,12 +85,12 @@ export const AdminMessageForm = () => {
               </select>
                 </div>
                 <div className="form-group">
-                    <textarea type="text" id="textArea1" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
+                    <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
             </fieldset>
             <button className="btn btn-primary"
                 onClick={event => {
-                    event.preventDefault()
+                    // event.preventDefault()
                     handleSaveMessage()
                 }}>
                 Post

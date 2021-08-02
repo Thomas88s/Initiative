@@ -104,12 +104,11 @@ export const AdminEventForm = () => {
           </fieldset>
           <fieldset>
             <div className="form-group">
-                    <label htmlFor="description">Event Location:</label>
+                    <label htmlFor="description">Event Details:</label>
                     <input type="text" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Please enter description" value={event.description}/>
                 </div>
           </fieldset>
             <button className="btn btn-primary"
-             disabled={isLoading}
             onClick={handleClickSaveEvent}> 
             Save Event
           </button>

@@ -43,24 +43,27 @@ export const ApplicationViews = () => {
             <Route exact path="/">
                 <Home />
             </Route>
-            <ServiceProvider>
-                <MessageProvider>
-                    <EventProvider>
-                        <TagProvider>
-                            <EventTagProvider>
-                                <UserProvider>
-                                    <Route exact path="/users">
-                                        <UserProfile />
-                                        <UserProfileServiceList />
-                                        <UserReceivedMessageList />
-                                        <UserProfileEventList />
-                                    </Route>
-                                </UserProvider>
-                            </EventTagProvider>
-                        </TagProvider>
-                    </EventProvider>
-                </MessageProvider>
-            </ServiceProvider>
+            <NewsLetterProvider>
+                <ServiceProvider>
+                    <MessageProvider>
+                        <EventProvider>
+                            <TagProvider>
+                                <EventTagProvider>
+                                    <UserProvider>
+                                        <Route exact path="/users">
+                                            <UserProfile />
+                                            <UserProfileServiceList />
+                                            <UserReceivedMessageList />
+                                            <UserProfileEventList />
+                                            <NewsList />
+                                        </Route>
+                                    </UserProvider>
+                                </EventTagProvider>
+                            </TagProvider>
+                        </EventProvider>
+                    </MessageProvider>
+                </ServiceProvider>
+            </NewsLetterProvider>
 
             <MessageProvider>
                 <UserProvider>
@@ -139,7 +142,7 @@ export const ApplicationViews = () => {
                             <AdminServiceList />
                         </Route>
                         <Route path="/admin/services/create">
-                            <ServiceForm />
+                            <AdminServiceForm />
                         </Route>
                         <Route path="/services/edit/:serviceId(\d+)">
                             <ServiceForm />
