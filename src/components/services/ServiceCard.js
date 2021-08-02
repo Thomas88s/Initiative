@@ -4,7 +4,7 @@ import "./Service.css"
 
 export const ServiceCard = ({ service }) => {
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
-    const { addTag, deleteTag, tags } = useContext(TagContext)
+    const { addTag, tags } = useContext(TagContext)
     
     const [tag, setTag] = useState({
         userId: currentUserId,
@@ -21,7 +21,7 @@ export const ServiceCard = ({ service }) => {
         let userId = currentUserId
         const foundTag = tags.find(tag => serviceId === tag.serviceId && userId === tag.userId)
         if (foundTag) {
-            deleteTag(foundTag.id)
+           alert("Service already selected")
         } else {
         setTag(newTag)
         addTag(tag)

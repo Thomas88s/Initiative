@@ -1,23 +1,26 @@
-.message {
-    display: flex;
-    justify-content: space-between;
-}
 
-.serviceList  {
+.adminMessagesReceived {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
     border: 1px solid black;
 }
 
-.userSubscribedServices {
+.adminMessagesSent {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
     border: 1px solid black;
 }
 
-.userSubscribedEvents {
+.adminMessagesSentCard {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.adminMessagesReceivedCard {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;

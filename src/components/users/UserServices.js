@@ -25,12 +25,14 @@ export const UserServiceList = () => {
 
     return (
         <>
+        <div className="userSubscribedServices">
             <h2>User Services</h2>
             <div className="services">
                 {foundTags.map(service => {
                     return <UserServiceCard key={service.service.id} service={service.service} />
                 })}
             </div>
+        </div>
         </>
     )
 }    

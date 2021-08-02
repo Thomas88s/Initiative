@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { MessageContext } from "../../messages/MessageProvider"
 import { UsersContext } from "../../users/UserProvider"
 import { AdminMessageCard } from "./AdminMessageCard"
-import "../../messages/Message.css"
+import "./AdminMessages.css"
 
 export const AdminHomeReceivedMessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
@@ -21,14 +21,15 @@ export const AdminHomeReceivedMessageList = () => {
  
       return (
         <>
-        <h2>Messages Received</h2>
-          <div className="messages">
-                {sortedMessages.map(message => {
-                    return <AdminMessageCard key={message.id} message={message} />
-                })}
-                
-            </div>
-          
+        <div className="adminMessagesReceived">
+            <h2>Messages Received</h2>
+            <div className="messages">
+                    {sortedMessages.map(message => {
+                        return <AdminMessageCard key={message.id} message={message} />
+                    })}
+                    
+                </div>
+        </div>
         </>
     )
 }

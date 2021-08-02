@@ -22,11 +22,13 @@ export const AdminMessageCard = ({ message }) => {
     }
 
     return (
-        <section className="message">
-            <p>{message.textArea}</p>
-            <p>Message From: {foundSender?.name}</p>
-            <p>{message.date}</p>
-            <button id={message.id} onClick={handleDelete}>Delete</button>
-        </section>
+        <div className="adminMessagesReceivedCard">
+            <section className="message">
+                <p>{message.textArea}</p>
+                <p>Message From: {foundSender?.name}</p>
+                <p>{message.date}</p>
+                <button id={message.id} onClick={handleDelete}>Delete</button>
+            </section>
+        </div>
     )
 }

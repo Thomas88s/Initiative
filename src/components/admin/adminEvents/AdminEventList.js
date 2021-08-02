@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { EventContext } from "../../events/EventProvider"
 import { AdminEventCard } from "./AdminEventCard"
-import "../../events/Event.css"
+import "./AdminEvents.css"
 
 export const AdminEventList = () => {
 
@@ -13,7 +13,7 @@ useEffect(() => {
 
   return (
      <>
-    <div className="events">
+    <div className="AdminEventsList">
       <h3>Events</h3>
       {
         events.map(event => {

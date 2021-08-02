@@ -84,10 +84,10 @@
   ],
   "services": [
     {
+      "id": 4,
       "name": "Independent Living Housing",
       "textArea": "Supervised housing program for young adults (aged 18-26) who have exited the state foster care system.  This program will provide free housing located in close proximity to Nashville State Community College to students who are actively pursuing their education.  Clients will also receive additional supportive services to learn life skills to become self-sustaining adults.",
-      "userId": 1,
-      "id": 4
+      "userId": 1
     },
     {
       "name": "VOCA Housing Program",
@@ -327,6 +327,11 @@
       "userId": 5,
       "serviceId": 14,
       "id": 15
+    },
+    {
+      "userId": 5,
+      "serviceId": 16,
+      "id": 16
     }
   ],
   "eventTags": [

@@ -26,12 +26,15 @@ export const UserProfileServiceList = () => {
 
     return (
         <>
+         <div className="userServices">
             <h2>User Services</h2>
-            <div className="messages">
+            <div className="services">
                 {foundTags.map(service => {
                     return <UserProfileServiceCard key={service.service.id} service={service.service} />
                 })}
             </div>
+
+         </div>
         </>
     )
 }    

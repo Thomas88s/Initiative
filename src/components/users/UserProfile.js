@@ -17,7 +17,7 @@ export const UserProfile = () => {
     return (
         <>
   
-     {/* <h1>Welcome {foundUser.name}</h1> */}
+  {/* <h1>Welcome {foundUser.name}</h1> */}
  
    {  
    foundUser?  <div className="users">

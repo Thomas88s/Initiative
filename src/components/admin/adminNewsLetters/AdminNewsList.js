@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { NewsContext } from "../../newsLetters/NewsLetterProvider"
 import { AdminNewsCard } from "./AdminNewsCard"
-import "../../newsLetters/NewsLetter.css"
+import "./AdminNewsLetters.css"
 
 export const AdminNewsList = () => {
 
@@ -13,7 +13,7 @@ useEffect(() => {
 
   return (
      <>
-    <div className="news">
+    <div className="adminNewsList">
       <h3>News Letters</h3>
       {
         news.map(news => {

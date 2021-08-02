@@ -3,7 +3,7 @@ import { EventContext } from "../events/EventProvider"
 import { UserProfileEventCard } from "./UserProfileEventCard"
 import { UsersContext } from "./UserProvider"
 import { EventTagContext } from "../tags/EventTagProvider"
-import "../services/Service.css"
+import "./User.css"
 
 
 
@@ -25,13 +25,15 @@ export const UserProfileEventList = () => {
 
 
     return (
-        <>
+        <> 
+        <div className="userEvents">
             <h2>Upcoming Events</h2>
             <div className="events">
                 {foundEventTags.map(event => {
                     return <UserProfileEventCard key={event.event.id} event={event.event} />
                 })}
             </div>
+        </div>
         </>
     )
 }    

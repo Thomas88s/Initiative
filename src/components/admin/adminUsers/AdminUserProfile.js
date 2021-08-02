@@ -5,8 +5,8 @@ import { MessageContext } from "../../messages/MessageProvider"
 import { AdminUserServiceCard } from "./AdminUserServiceCard"
 import { TagContext } from "../../tags/TagProvider"
 import { AdminUserMessageCard } from "./AdminUserMessageCard"
-import { AdminUserCard } from "./AdminUserCard"
-import "../../users/User.css"
+import { AdminUserProfileCard } from "../../users/UserProfileCard"
+import "./AdminUsers.css"
 
 
 export const AdminUserProfile = () => {
@@ -56,27 +56,35 @@ export const AdminUserProfile = () => {
                   </option>
                 ))}
               </select>
-            </div>
-    <h1>User Profile</h1>
-   {  
-     <div className="users">
-        <AdminUserCard key={selectedUser.id} user={selectedUser} />
-    </div> 
-    }
+    </div>
 
-     <h2>Services User Subscribed To</h2>
+    <div className="adminUserProfile">
+        <h1>Users Profile</h1>
+        {  
+        <div>
+            <AdminUserProfileCard key={selectedUser.id} user={selectedUser} />
+        </div> 
+        }
+    </div>
+          
+    <div className="adminUserServices">
+        <h2>Services User Subscribed To</h2>
+                <div className="messages">
+                    {foundTags.map(service => {
+                        return <AdminUserServiceCard key={service.service.id} service={service.service} />
+                    })}
+    </div>
+
+    </div>
+    
+    <div className="adminUserMessages">
+       <h2>User Messages</h2>
             <div className="messages">
-                {foundTags.map(service => {
-                    return <AdminUserServiceCard key={service.service.id} service={service.service} />
+                {foundMessages.map(message => {
+                    return <AdminUserMessageCard key={message.id} message={message} />
                 })}
             </div>
-
-       <h2>User Messages</h2>
-     <div className="messages">
-         {foundMessages.map(message => {
-             return <AdminUserMessageCard key={message.id} message={message} />
-         })}
-     </div>
+    </div>
 
   </>
 )

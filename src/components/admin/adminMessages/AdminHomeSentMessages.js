@@ -21,6 +21,7 @@ export const AdminHomeSentMessageList = () => {
 
       return (
         <>
+        <div className="adminMessagesSent">
         <h2>Sent Messages</h2>
           <div className="messages">
                 {sortedMessages.map(message => {
@@ -28,6 +29,7 @@ export const AdminHomeSentMessageList = () => {
                 })}
                 
             </div>
+        </div>
           
         </>
     )
