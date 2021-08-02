@@ -60,6 +60,7 @@ export const AdminServiceForm = () => {
                     .then(() => setService({  name: "",
                     textArea: "",
                     userId: currentUserId }))
+                    .then(() => history.push("/admin/services0sH0AOSszsP5GEUh"))
             }
         }
         useEffect(() => {
@@ -94,7 +95,6 @@ export const AdminServiceForm = () => {
             
            
             <button className="btn btn-primary"
-             disabled={isLoading}
                 onClick={handleSaveService}>
                 Post
             </button>

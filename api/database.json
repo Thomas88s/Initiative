@@ -26,116 +26,140 @@
       "birthDate": "2021-07-20",
       "isAdmin": false,
       "id": 3
+    },
+    {
+      "email": "francisca1993@yahoo.com",
+      "name": "Patrick B Wenger",
+      "address": "154 Brookview Drive, Santa Clara, California(CA), 95054",
+      "phoneNumber": "408-982-1152",
+      "birthDate": "3/27/1993",
+      "isAdmin": false,
+      "id": 4
+    },
+    {
+      "email": "quinten.hue@yahoo.com",
+      "name": "Beverly K Fitzsimmons",
+      "address": "1238 Linda Street, Philadelphia, Pennsylvania(PA), 19108",
+      "phoneNumber": "267-799-2714",
+      "birthDate": "10/1/1995",
+      "isAdmin": false,
+      "id": 5
+    },
+    {
+      "email": "efrain2013@gmail.com",
+      "name": "Melvin L Lumpkin",
+      "address": "3785 Blackwell Street, Dutch Harbor, Alaska(AK), 99692",
+      "phoneNumber": "907-359-1539",
+      "birthDate": "6/14/1997",
+      "isAdmin": false,
+      "id": 6
+    },
+    {
+      "email": "sherwood1974@gmail.com",
+      "name": "Irene B Hammett",
+      "address": "2825 Farnum Road, New York, New York(NY), 10007",
+      "phoneNumber": "212-347-2188",
+      "birthDate": "10/24/1996",
+      "isAdmin": false,
+      "id": 7
+    },
+    {
+      "email": "gaston1979@yahoo.com",
+      "name": "Darrin M Price",
+      "address": "650 Simpson Street, Smithfield, Illinois(IL), 61477",
+      "phoneNumber": "309-783-6111",
+      "birthDate": "11/6/1997",
+      "isAdmin": false,
+      "id": 8
+    },
+    {
+      "email": "ebony1992@gmail.com",
+      "name": "Matthew M Deluna",
+      "address": "2778 Chandler Drive, Ash Grove, Missouri(MO), 65604",
+      "phoneNumber": "417-672-5839",
+      "birthDate": "10/26/1982",
+      "isAdmin": false,
+      "id": 9
     }
   ],
   "services": [
     {
-      "id": 1,
-      "name": "great service ",
-      "textArea": "great service ",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "name": "great service 2",
-      "textArea": "great service 2",
-      "userId": 1
-    },
-    {
-      "name": "happy service time",
-      "textArea": "happy service time",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "happy service time 2",
-      "textArea": "happy service time 2",
+      "name": "Independent Living Housing",
+      "textArea": "Supervised housing program for young adults (aged 18-26) who have exited the state foster care system.  This program will provide free housing located in close proximity to Nashville State Community College to students who are actively pursuing their education.  Clients will also receive additional supportive services to learn life skills to become self-sustaining adults.",
       "userId": 1,
       "id": 4
     },
     {
-      "name": "happy service time 3",
-      "textArea": "happy service time 3",
+      "name": "VOCA Housing Program",
+      "textArea": "Supportive housing program for young adults who have been victim to a crime.  This program will provide free or low cost housing to young adults (ages 18-25) who are actively working to achieve vocational goals.  This housing program also assists young adults with support towards mental health needs.",
       "userId": 1,
       "id": 5
     },
     {
-      "name": "happy service time 4",
-      "textArea": "happy service time 4",
+      "name": "Secondary Education ",
+      "textArea": "Education program to help students obtain their high school diploma or equivalent certification.  The curriculum can be customized to fit the needs of the individual student.  Most students work one-on-one with a teacher to obtain their HiSet, and others work towards an online diploma program with an accredited online source.  Tutoring and other barrier supports are focused to help students obtain their goals. ",
       "userId": 1,
       "id": 6
     },
     {
-      "name": "happy service time 5",
-      "textArea": "happy service time 5",
+      "name": "Post Secondary Education",
+      "textArea": "This service is focused for young people pursuing their post secondary degree.  This could be traditional college, community college, or other non-traditional certification programs.  Clients will receive support navigating the confusing world of grants and financial aid.  They will also receive access to an on campus supportive adult who can help young adults in place of supportive family.  These students can also receive tutoring support, college guidance, and other assistance to ensure they successfully complete their post secondary program.",
       "userId": 1,
       "id": 7
     },
     {
-      "name": "happy service time 6",
-      "textArea": "happy service time 6",
+      "name": "Community Resource Connection (The Hub)",
+      "textArea": "Crime victims ages 17-25 can work along side a coach and/or Peer Support Worker to help them become connected to the appropriate community resources to fulfill their vocational and/or educational goals.  Young people will experience a trauma informed service that focuses on meeting young people where they are, helping them identify their goals, and then helping guide them to the appropriate resources to help reduce barriers to success.",
       "userId": 1,
       "id": 8
     },
     {
-      "name": "happy service time 7",
-      "textArea": "happy service time 7",
+      "name": "Job Readiness",
+      "textArea": "Young people up to the age of 26 can get support with all areas of trying to gain meaningful employment.  These supports are customized to the individual and could include resume writing, job placement, internships, life skills, aptitude assessments, and other supports to help people achieve employment that provides a living wage.",
       "userId": 1,
       "id": 9
     },
     {
-      "name": "happy service time 8",
-      "textArea": "happy service time 8",
+      "name": "Health and Wellness",
+      "textArea": "This program is designed to support young people to learn many aspects of living a healthy life.  This program focused on both healthy mind, body and spirit.  Classes include cooking, art, trauma and resiliency, life skills, and many more.  ",
       "userId": 1,
       "id": 10
     },
     {
-      "name": "happy service time 9",
-      "textArea": "happy service time 9",
+      "name": "SNAP Employment & Training",
+      "textArea": "SNAP Employment & Training is a specialized program for young people who are receiving Supplemental Nutrition Benefits.  This program is designed to help support young people obtain an education and/or a job with a sustainable wage that will prevent them from needing government assistance for support.  This program helps young adults with financial assistance to gain meaningful employment with supportive services to help set goals and achieve those goals.",
       "userId": 1,
       "id": 11
     },
     {
-      "name": "currentUserId 10",
-      "textArea": "currentUserId",
+      "name": "Mentoring",
+      "textArea": "Many young people who have been in foster care do not have a supportive adult to help them transition into living on their own.  This program is meant to help those that have been in care find a supportive adult who can help fill that gap.  This program helps both young adults who need a mentor get paired with an adult who is looking to help!  This program is designed to help provide supports to both the mentor and the mentee.  Please message for more details!",
       "userId": 1,
       "id": 12
     },
     {
-      "name": "newsesdahldah",
-      "textArea": "<h2>Message Board</h2><h2>Message Board</h2>",
+      "name": "Become a Foster Parent",
+      "textArea": "Are you interested in hosting a child in need in your home?  We can help provide training and support to help you become a certified foster home within the State of Tennessee.  We will parter with your family to help you provide this incredibly important service to a child.  Click for more information.",
       "userId": 1,
       "id": 13
     },
     {
-      "id": 14,
-      "name": "12345643",
-      "textArea": "adsfasdfa",
-      "userId": 1
+      "name": "Financial Education Services",
+      "textArea": "This program provides education about a variety of topics focused on financial wellness.  We will help you understand how to set up a bank account, how to save money to purchase assets, how to obtain credit to reduce your interest rates, and much more.  If you need help understanding the world of finances, this program is perfect for you!",
+      "userId": 1,
+      "id": 14
     },
     {
-      "id": 15,
-      "name": "123445678901234980812308394120",
-      "textArea": "1234457612347891207439871209",
-      "userId": 1
+      "name": "Rent & Utility Assistance",
+      "textArea": "Need to find a program that can help you from being evicted or losing your utilities?  We can help.  Message for more information and see if we can help point you in the right direction for short term financial supports.",
+      "userId": 1,
+      "id": 15
     },
     {
       "id": 16,
-      "name": "hippy happy",
-      "textArea": "all indians and no chiefs",
+      "name": "Proud Parenting",
+      "textArea": "This program is designed to help new parents navigate the difficulties of being a new parent.  Classes offered about the challenges parenting children, and how to help find the right supports for your family.",
       "userId": 1
-    },
-    {
-      "id": 17,
-      "name": "newest service",
-      "textArea": "services0sH0AOgets0sH0AOSszsP5GEUh",
-      "userId": 1
-    },
-    {
-      "name": "adfsas",
-      "textArea": "asdfs",
-      "userId": 1,
-      "id": 18
     }
   ],
   "messages": [
@@ -182,7 +206,7 @@
       "id": 10
     },
     {
-      "textArea": "Well i still love you",
+      "textArea": "Well is this a change?",
       "receiverId": 1,
       "senderId": 3,
       "date": "07/29/2021",
@@ -197,52 +221,63 @@
     },
     {
       "id": 13,
-      "textArea": "times oit",
+      "textArea": "Services rendered are kept on file",
       "senderId": 1,
       "receiverId": 2,
       "date": "07/28/2010"
+    },
+    {
+      "textArea": "It's great to be part of this. Thanks for this opportunity!",
+      "receiverId": 1,
+      "senderId": 5,
+      "date": "08/02/2021",
+      "id": 14
+    },
+    {
+      "textArea": "It is our great pleasure to be able to welcome you as our precious family member. My thoughts are really revolving around you at the great news of your arrival. I know the previous days were very painful and scary for you, but be assured we are here to love and protect you always. We know you will be very happy with us and your future days will give you many beautiful and loving moments. I know like you my life will also change with the sweet memories of your love and happiness.",
+      "senderId": 1,
+      "receiverId": 5,
+      "date": "08/02/2021",
+      "id": 15
     }
   ],
   "events": [
     {
-      "id": 1,
-      "name": "Thomas witherow",
-      "date": "2021-07-02",
-      "description": "asdf"
+      "id": 6,
+      "name": "Instagram Live -- How to Sign up for SNAP",
+      "date": "2021-08-10",
+      "description": "Join us to learn how to get SNAP and learn about the common reasons that people get denied that you can avoid."
     },
     {
-      "name": "banaroo",
-      "date": "2021-07-22",
-      "location": "Mansker",
-      "description": "asdf",
-      "id": 2
+      "name": "Free Tax Help",
+      "date": "2022-02-25",
+      "location": "200 Main Street Nashville, TN 37228",
+      "description": "This event will have tax professionals available to help you file your income taxes and get the maximum refund possible.",
+      "id": 7
     },
     {
-      "name": "Burning Man",
-      "date": "2021-11-30",
-      "location": "Lawrence County",
-      "description": "crazy af",
-      "id": 3
+      "name": "Winter Coat Drive",
+      "date": "2021-10-01",
+      "location": "Youth Connections Resource Center",
+      "description": "Come donate your gently used coats OR come shop if you're in need!",
+      "id": 8
     },
     {
-      "name": "Martins aquarium",
-      "date": "2021-07-31",
-      "location": "Lawrence County",
-      "description": "asdf",
-      "id": 4
+      "name": "COVID-19 Vaccine Info Session",
+      "date": "2021-08-07",
+      "location": "McKendree Church ",
+      "description": "If you're still not vaccinated, and you would like to learn more about the COVID-19 vaccines, come see us!  We will have a medical professional available for all your questions!",
+      "id": 9
+    },
+    {
+      "name": "Foster Parents Night Out",
+      "date": "2021-12-10",
+      "location": "Monroe Harding",
+      "description": "If you are a foster parent, and you need a night away, we've got you!  Come bring your foster children for a night of fun, while you and your spouse can spend a night out (or home).  We will have certified and trained baby sitters to keep the kids.  Message us for more details.",
+      "id": 10
     }
   ],
   "tags": [
-    {
-      "userId": 2,
-      "serviceId": 1,
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "serviceId": 3,
-      "id": 2
-    },
     {
       "userId": 2,
       "serviceId": 5,
@@ -262,29 +297,58 @@
       "userId": 3,
       "serviceId": 13,
       "id": 9
+    },
+    {
+      "userId": 2,
+      "serviceId": 12,
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "serviceId": 15,
+      "id": 11
+    },
+    {
+      "userId": 5,
+      "serviceId": 5,
+      "id": 12
+    },
+    {
+      "userId": 5,
+      "serviceId": 9,
+      "id": 13
+    },
+    {
+      "userId": 5,
+      "serviceId": 10,
+      "id": 14
+    },
+    {
+      "userId": 5,
+      "serviceId": 14,
+      "id": 15
     }
   ],
   "eventTags": [
     {
-      "userId": 1,
-      "eventId": 1,
-      "id": 1
-    },
-    {
       "userId": 2,
-      "eventId": 1,
+      "eventId": 8,
       "id": 2
     },
     {
-      "2": "",
-      "userId": 2,
-      "eventId": 2,
+      "userId": 5,
+      "eventId": 6,
       "id": 3
     },
     {
-      "userId": 3,
-      "eventId": 1,
-      "id": 6
+      "userId": 5,
+      "eventId": 9,
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "eventId": 10,
+      "id": 5
     }
   ],
   "messageTags": [],
@@ -292,16 +356,15 @@
   "newsLetters": [
     {
       "id": 1,
-      "name": "newsletter 1",
-      "userId": 1,
+      "title": "Welcome",
       "date": "11-11-1212",
-      "textArea": "HELLO WORLD?"
+      "textArea": "Welcome to News From Our Heart! This newsletter is published by Foster and Adoptive Family Services (FAFS). FAFS’ mission is to provide advocacy and enriching programs and services to empower families and youth to thrive. We hope that you will find this information to be both interesting and informative. To learn more about FAFS, please visit www.fafsonline.org. Have questions or comments?"
     },
     {
-      "id": 2,
-      "title": "Great News",
-      "date": "2021-08-18",
-      "textArea": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "title": "Connecting is Eveything",
+      "date": "2021-08-02",
+      "textArea": "When we’re uncertain, alone, or afraid, we look to our families for support. But for our kids, for kids in foster care, who can they look to? The last year was an important reminder that there are children right here in our community for whom loneliness and uncertainty are not the exception but the rule. The feelings we all struggled with were only a glimpse of what they go through. After all, just as important for a child as food, water, and shelter is an often overlooked basic need: Family. . In 2019, we celebrated our 30th anniversary as an innovative, agile leader in ensuring every child in foster care has a home to help them heal. In 2020, we realized it has taken us those three decades to prepare for the present moment. We know our kids and families have a hard road ahead. Everything from reopening and recovering after the pandemic to dramatic reforms to our residential and mental health services will test the creaking and exhausted infrastructure upon which our kids rely. But, in the last year, we saw the community step up to turn a tremendous threat into an opportunity for healing. More families received more support than ever before. Our work didn’t slow down, but in fact redoubled. We have you to thank for that. You share our vision of “For Every Child . . . A Place to Call Home.” You, along with thousands of other parents, volunteers, donors, advocates, and professionals, believe that no child should face the future alone. Thank you for connecting our kids so they can grow and heal. There are enormous, intractable problems ahead in foster care, but you showed us over the past year that the biggest problems can be the greatest opportunities for progress. And, we promise you this: our vision, and the goals we set on the way to achieving it, will be as great as the needs of our kids. After all, if you believed a home for every child was within your reach, is there anything you wouldn’t do to make it happen?",
+      "id": 2
     }
   ]
 }

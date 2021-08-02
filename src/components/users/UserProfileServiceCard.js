@@ -7,7 +7,7 @@ export const UserProfileServiceCard = ({ service }) => {
 
     return (
         <section className="service">
-            <div className="service_Name">{service.name}</div>
+            <h4 className="service_Name">{service.name}</h4>
             <div className="service_text">{service.textArea}</div>
             
            
