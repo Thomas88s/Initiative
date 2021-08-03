@@ -401,6 +401,11 @@
       "userId": 0,
       "newsLetterId": 0,
       "id": 0
+    },
+    {
+      "userId": 2,
+      "newsLetterId": 1,
+      "id": 1
     }
   ],
   "newsLetters": [

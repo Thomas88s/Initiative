@@ -16,7 +16,7 @@ export const AdminHomeSentMessageList = () => {
           getUsers()
           .then(getMessages())
          
-          console.log(sortedMessages)
+       
     }, [])
 
       return (
