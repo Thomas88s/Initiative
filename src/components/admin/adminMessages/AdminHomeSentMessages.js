@@ -12,11 +12,11 @@ export const AdminHomeSentMessageList = () => {
     let sortedMessages = foundSentMessages.sort((a,b) => {
         return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
       })
-
-    useEffect(() => {
-        getUsers()
-        .then(getMessages)
-        
+      useEffect(() => {
+          getUsers()
+          .then(getMessages())
+         
+          console.log(sortedMessages)
     }, [])
 
       return (
