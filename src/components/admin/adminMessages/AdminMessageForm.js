@@ -1,7 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import { MessageContext } from "../../messages/MessageProvider";
 import { UsersContext } from "../../users/UserProvider";
-import { useHistory, useParams } from "react-router-dom";
+import { MessageTagContext } from "../tags/MessageTagProvider"
 import "../../messages/Message.css";
 
 var today = new Date();

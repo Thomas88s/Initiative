@@ -1,13 +1,17 @@
   import React, { useContext }from "react"
-  import { NewsContext } from "../newsLetters/NewsLetterProvider"
+  import { NewsTagContext } from "../tags/NewsTagProvider"
   import "../newsLetters/NewsLetter.css"
 
 
   export const NewsCard = ({ news }) => {
-  const { deleteNews } = useContext(NewsContext)
+  const { addNewsTag } = useContext(NewsTagContext)
+  const currentUserId = parseInt(sessionStorage.getItem("App_user"))
   
-  const handleRelease = () => {
-      deleteNews(news.id)
+  const handleRelease = (event) => {
+    addNewsTag({
+        userId: currentUserId,
+        newsLetterId: parseInt(event.target.id),
+    })
     }
     
     
@@ -18,7 +22,7 @@
           <div className="eventTextArea">{news.textArea}</div>
 
       
-          <button onClick={handleRelease}>Mark Seen</button>
+          <button id={news.id} onClick={handleRelease}>Mark Seen</button>
       </section>
    )
   }
