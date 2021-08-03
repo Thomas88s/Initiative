@@ -41,7 +41,12 @@ export const AdminUserProfile = () => {
     }}
 
     let foundTags = tags.filter(tag => (tag.userId === selectedUser.id)) 
-    let foundMessages = messages.filter(message => (message.receiverId === selectedUser.id)) 
+    let foundMessages = messages.filter(message => (message.senderId === selectedUser.id)) 
+
+    let sortedReceivedMessages = foundMessages.sort((a,b) => {
+        return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
+      })
+
     
     return (
         <>
@@ -80,7 +85,7 @@ export const AdminUserProfile = () => {
     <div className="adminUserMessages">
        <h2>User Messages</h2>
             <div className="messages">
-                {foundMessages.map(message => {
+                {sortedReceivedMessages.map(message => {
                     return <AdminUserMessageCard key={message.id} message={message} />
                 })}
             </div>
