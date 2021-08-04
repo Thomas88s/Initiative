@@ -36,7 +36,7 @@ import { UserProfileServiceList } from "./users/UserProfileServices"
 import { UserSentMessageList } from "./users/UserSentMessageList"
 import { UserReceivedMessageList } from "./users/UserReceivedMessageList"
 import { UserProfileEventList } from "./users/UserProfileEvents"
-import { MessageTagProvider } from "./tags/MessageTagProvider"
+import { VolunteerProvider } from "./volunteers/VolunteerProvider"
 
 
 
@@ -109,15 +109,16 @@ export const ApplicationViews = () => {
                             </Route>
                     </UserProvider>
                 </EventTagProvider>
-            </EventProvider>            
+            </EventProvider>     
 
-                        <Route exact path="/volunteer">
-                            <AdminServiceForm />
-                            <AdminServiceList />
+            <VolunteerProvider>
+                        <Route exact path="/volunteers">    
                         </Route>
-                        <Route path="/volunteer/create">
-                            <AdminServiceForm />
+                        <Route path="/volunteers/create">
                         </Route>
+                        <Route path="/volunteers/edit/:volunteerId(\d+)"> 
+                        </Route>
+            </VolunteerProvider>
 
             <UserProvider>
                 <ServiceProvider>
@@ -217,8 +218,10 @@ export const ApplicationViews = () => {
                 </TagProvider>
             </ServiceProvider>
 
-          
-
+            <VolunteerProvider>
+                        <Route exact path="/admin/volunteers">    
+                        </Route>
+            </VolunteerProvider>
         </>
     )
 }

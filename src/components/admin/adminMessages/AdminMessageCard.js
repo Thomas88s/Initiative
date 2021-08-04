@@ -23,7 +23,7 @@ export const AdminMessageCard = ({ message }) => {
 
     return (
         <div className="adminMessagesReceivedCard">
-            <section className="message">
+            <section className="receivedMessage">
                 <p>{message.textArea}</p>
                 <p>Message From: {foundSender?.name}</p>
                 <p>{message.date}</p>
