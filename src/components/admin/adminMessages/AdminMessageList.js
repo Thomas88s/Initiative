@@ -49,6 +49,8 @@ export const AdminMessageList = () => {
         setSelectedUser(foundUser)
     }}
 
+    const foundReceiver = users.find(user => (user.id === ))
+    
     let foundSentMessages = messages.filter(message => (message.receiverId === selectedUser.id))
     let foundReceivedMessages = messages.filter(message => (message.senderId === selectedUser.id))
 
@@ -106,6 +108,7 @@ export const AdminMessageList = () => {
                 {sortedReceivedMessages.map(message => {
                     return <AdminMessageCard key={message.id} message={message} />
                 })}
+            <h4>Send {foundReceiver?.name}</h4>
                   <div className="form-group">
                     <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
