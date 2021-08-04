@@ -3,6 +3,7 @@ import { MessageContext } from "../../messages/MessageProvider"
 import { UsersContext } from "../../users/UserProvider"
 import { AdminMessageCard2 } from "./AdminMessageCard2"
 import { AdminMessageCard } from "./AdminMessageCard"
+import { MessageTagContext } from "../../tags/MessageTagProvider"
 import "../../messages/Message.css"
 
 var today = new Date();
@@ -15,8 +16,12 @@ today = mm + '/' + dd + '/' + yyyy;
 export const AdminMessageList = () => {
     const { messages, getMessages, addMessage } = useContext(MessageContext)
     const { getUsers, users, getUserById } = useContext(UsersContext)
+    const { addMessageTag } = useContext(MessageTagContext)
     const currentUserId = parseInt(sessionStorage.getItem("App_user"))
+   
     const user = getUserById
+
+
 
     const [selectedUser, setSelectedUser] = useState({
         name: "",
@@ -32,6 +37,7 @@ export const AdminMessageList = () => {
         receiverId: 0,
         date: ""
     })
+
    
     useEffect(() => {
         getUsers()
@@ -49,8 +55,6 @@ export const AdminMessageList = () => {
         setSelectedUser(foundUser)
     }}
 
-    const foundReceiver = users.find(user => (user.id === ))
-    
     let foundSentMessages = messages.filter(message => (message.receiverId === selectedUser.id))
     let foundReceivedMessages = messages.filter(message => (message.senderId === selectedUser.id))
 
@@ -61,6 +65,10 @@ export const AdminMessageList = () => {
         return parseInt(a.date.split("-").join("")) - parseInt(b.date.split("-").join(""))
       })
 
+      
+
+      const lastIndex = messages.length - 1
+      
       const handleControlledInputChange = (event) => {
         const newMessage = { ...message }
         newMessage[event.target.id] = event.target.value
@@ -82,6 +90,16 @@ export const AdminMessageList = () => {
                 receiverId: 0 }))
         }
     }
+
+    const handleAdd = (event) => {
+        addMessageTag({
+            userId: selectedUser.id,
+            messageId: lastIndex >= 0 ? messages[lastIndex].id + 1 : 1,
+        })
+
+        }
+    
+   
     return (
         <>
         <h2>Message Board</h2>
@@ -108,13 +126,14 @@ export const AdminMessageList = () => {
                 {sortedReceivedMessages.map(message => {
                     return <AdminMessageCard key={message.id} message={message} />
                 })}
-            <h4>Send {foundReceiver?.name}</h4>
+            
+            <h4>Send {selectedUser?.name} a message:</h4>
                   <div className="form-group">
                     <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
-            <button className="btn btn-primary"
+            <button className="btn btn-primary" id={message.id}
                 onClick={event => {
-                  
+                    handleAdd(event)
                     handleSaveMessage()
                 }}>
                 Post

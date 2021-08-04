@@ -4,10 +4,13 @@ import { Home } from "./Home"
 import { UserProvider } from "./users/UserProvider"
 import { UserProfile } from "./users/UserProfile"
 import { AdminUserList } from "./admin/adminUsers/AdminUserList"
+import { AdminUserServiceList } from "./admin/adminUserServices/AdminUserServiceList"
 import { AdminUserProfile } from "./admin/adminUsers/AdminUserProfile"
 import { AdminMessageList } from "./admin/adminMessages/AdminMessageList"
 import { AdminHomeReceivedMessageList } from "./admin/adminMessages/AdminHomeReceivedMessages"
 import { AdminHomeSentMessageList } from "./admin/adminMessages/AdminHomeSentMessages"
+import { AdminReceivedUserMessageList } from "./admin/adminUsers/AdminReceivedUserMessageList"
+import { AdminSentUserMessageList } from "./admin/adminUsers/AdminSentUserMessageList"
 import { AdminServiceList } from "./admin/adminServices/AdminServiceList"
 import { AdminServiceForm } from "./admin/adminServices/AdminServiceForm"
 import { AdminEventList } from "./admin/adminEvents/AdminEventList"
@@ -31,6 +34,7 @@ import { UserProfileServiceList } from "./users/UserProfileServices"
 import { UserSentMessageList } from "./users/UserSentMessageList"
 import { UserReceivedMessageList } from "./users/UserReceivedMessageList"
 import { UserProfileEventList } from "./users/UserProfileEvents"
+import { MessageTagProvider } from "./tags/MessageTagProvider"
 
 
 
@@ -85,6 +89,7 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </TagProvider>
             </ServiceProvider>
+
                     <NewsLetterProvider>
                         <Route exact path="/newsLetters">
                             <NewsList />
@@ -101,6 +106,14 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </EventTagProvider>
             </EventProvider>            
+
+                        <Route exact path="/volunteer">
+                            <AdminServiceForm />
+                            <AdminServiceList />
+                        </Route>
+                        <Route path="/volunteer/create">
+                            <AdminServiceForm />
+                        </Route>
 
             <UserProvider>
                 <ServiceProvider>
@@ -126,13 +139,15 @@ export const ApplicationViews = () => {
                 </MessageProvider>
             </ServiceProvider>
 
-            <UserProvider>
-                <MessageProvider>
-                    <Route path="/admin/messages1sZY5bgG04Pw7aws">
-                        <AdminMessageList />
-                    </Route>
-                </MessageProvider>
-            </UserProvider>
+            <MessageTagProvider>
+                <UserProvider>
+                    <MessageProvider>
+                        <Route path="/admin/messages1sZY5bgG04Pw7aws">
+                            <AdminMessageList />
+                        </Route>
+                    </MessageProvider>
+                </UserProvider>
+            </MessageTagProvider>
 
             <ServiceProvider>
                 <TagProvider>
@@ -176,6 +191,25 @@ export const ApplicationViews = () => {
                             <AdminNewsForm />
                         </Route>
             </NewsLetterProvider>
+
+            <MessageProvider>
+                <UserProvider>
+                    <Route exact path="/admin/messages">
+                        <AdminSentUserMessageList />
+                        <AdminReceivedUserMessageList />
+                    </Route>
+                </UserProvider>
+            </MessageProvider>
+
+            <ServiceProvider>
+                <TagProvider>
+                    <UserProvider>
+                        <Route exact path="/admin/services">
+                            <AdminUserServiceList />
+                        </Route>
+                    </UserProvider>
+                </TagProvider>
+            </ServiceProvider>
         </>
     )
 }

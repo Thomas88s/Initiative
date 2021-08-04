@@ -253,6 +253,13 @@
       "receiverId": 2,
       "date": "08/03/2021",
       "id": 17
+    },
+    {
+      "textArea": "well hello there",
+      "senderId": 1,
+      "receiverId": 2,
+      "date": "08/04/2021",
+      "id": 18
     }
   ],
   "events": [
@@ -395,7 +402,18 @@
       "id": 7
     }
   ],
-  "messageTags": [],
+  "messageTags": [
+    {
+      "id": 0,
+      "messageId": 0,
+      "userId": 0
+    },
+    {
+      "userId": 2,
+      "messageId": 18,
+      "id": 1
+    }
+  ],
   "newsTags": [],
   "newsLetters": [
     {
