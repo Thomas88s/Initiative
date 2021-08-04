@@ -42,10 +42,10 @@ export const AdminNavBar = (props) => {
           <Link className="nav-link" to="">Users Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/messages">User Messages</Link>
+          <Link className="nav-link" to="/admin/messages">User Messages</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/services">User Services</Link>
+          <Link className="nav-link" to="/admin/services">User Services</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/login" onClick={event => {
