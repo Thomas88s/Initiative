@@ -27,6 +27,8 @@ import { ServiceProvider } from "./services/ServiceProvider"
 import { NewsList } from "./newsLetters/NewsLetterList"
 import { NewsLetterProvider } from "./newsLetters/NewsLetterProvider"
 import { TagProvider } from "./tags/TagProvider"
+import { MessageTagProvider } from "./tags/MessageTagProvider"
+import { NewsTagProvider } from "./tags/NewsTagProvider"
 import { EventTagProvider } from "./tags/EventTagProvider"
 import { UserServiceList } from "./users/UserServices"
 import { UserEventList } from "./users/UserEvents"
@@ -90,11 +92,13 @@ export const ApplicationViews = () => {
                 </TagProvider>
             </ServiceProvider>
 
+            <NewsTagProvider>
                     <NewsLetterProvider>
                         <Route exact path="/newsLetters">
                             <NewsList />
                         </Route>
                     </NewsLetterProvider>
+            </NewsTagProvider>
 
             <EventProvider>
                 <EventTagProvider>
@@ -139,6 +143,7 @@ export const ApplicationViews = () => {
                 </MessageProvider>
             </ServiceProvider>
 
+
             <MessageTagProvider>
                 <UserProvider>
                     <MessageProvider>
@@ -148,6 +153,7 @@ export const ApplicationViews = () => {
                     </MessageProvider>
                 </UserProvider>
             </MessageTagProvider>
+
 
             <ServiceProvider>
                 <TagProvider>
@@ -210,6 +216,9 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </TagProvider>
             </ServiceProvider>
+
+          
+
         </>
     )
 }

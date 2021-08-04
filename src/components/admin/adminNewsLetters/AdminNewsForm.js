@@ -5,7 +5,6 @@ import "../../newsLetters/NewsLetter.css"
 
 export const AdminNewsForm = () => {
     const { addNews, getNewsById, getNews, editNews } = useContext(NewsContext)
-
     const [news, setNews] = useState({
 
         title: "",

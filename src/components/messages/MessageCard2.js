@@ -23,7 +23,7 @@ export const MessageCard2 = ({ message }) => {
             <p>To Admin:</p>
             <p>{message.textArea}</p>
             <p>{message.date}</p>
-            <button id={message.id} onClick={handleDelete}>Delete</button>
+            <button id={message.id} onClick={handleDelete}>Mark Read</button>
         </section>
     )
 }
