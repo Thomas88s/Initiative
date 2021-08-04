@@ -116,13 +116,13 @@ export const AdminMessageList = () => {
               </select>
             </div>
             <h4>To</h4>
-            <div className="messages">
+            <div className="SentMessages">
                 {sortedSentMessages.map(message => {
                     return <AdminMessageCard2 key={message.id} message={message} />
                 })}
             </div>    
             <h4>From</h4>
-            <div className="messages">
+            <div className="receivedMessages">
                 {sortedReceivedMessages.map(message => {
                     return <AdminMessageCard key={message.id} message={message} />
                 })}
