@@ -6,12 +6,12 @@ export const VolunteerProvider = (props) => {
     const [volunteers, setVolunteers] = useState([])
 
     const getVolunteers = () => {
-        return fetch("http://localhost:8088/volunteers")
+        return fetch("http://localhost:8088/volunteers?_expand=user")
             .then(res => res.json())
             .then(setVolunteers)
     }
 
-    const getVolunteersById = (id) => {
+    const getVolunteerById = (id) => {
         return fetch(`http://localhost:8088/volunteers/${id}`)
             .then(res => res.json())
     }
@@ -47,7 +47,7 @@ export const VolunteerProvider = (props) => {
 
     return (
         <VolunteerContext.Provider value={{
-            volunteers, getVolunteers, getVolunteersById, addVolunteer, deleteVolunteer, editVolunteer
+            volunteers, getVolunteers, getVolunteerById, addVolunteer, deleteVolunteer, editVolunteer
         }}>
             {props.children}
         </VolunteerContext.Provider>
