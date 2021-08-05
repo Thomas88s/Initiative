@@ -10,6 +10,7 @@ export const AdminEventForm = () => {
 
         name: "",
         date: "",
+        time: "",
         location: "",
         description: ""
     });
@@ -46,6 +47,7 @@ export const AdminEventForm = () => {
                 id: eventId,
                 name: event.name,
                 date: event.date,
+                time: event.time,
                 description: event.description
                 
             })
@@ -55,10 +57,12 @@ export const AdminEventForm = () => {
             addEvent({
                 name: event.name,
                 date: event.date,
+                time: event.time,
                 location: event.location,
                 description: event.description})
                 .then(() => setEvent({   name: "",
                 date: "",
+                time: "",
                 location: "",
                 description: "" })) 
           }
@@ -93,7 +97,13 @@ export const AdminEventForm = () => {
             <fieldset>
             <div className="form-group">
                     <label htmlFor="date">Event Date:</label>
-                    <input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control" value={event.date} />
+                    <input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control"  value={event.date} />
+                </div>
+          </fieldset>
+            <fieldset>
+            <div className="form-group">
+                    <label htmlFor="time">Event Time:</label>
+                    <input type="text" id="time" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Please enter time" value={event.time} />
                 </div>
           </fieldset>
           <fieldset>
