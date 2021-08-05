@@ -39,6 +39,9 @@ export const AdminNavBar = (props) => {
           <Link className="nav-link" to="/admin/newsLettersBctGSb59aC7uZPQW">newsLetter</Link>
         </li>  
         <li className="nav-item">
+          <Link className="nav-link" to="/admin/volunteers">Volunteers</Link>
+        </li>  
+        <li className="nav-item">
           <Link className="nav-link" to="">Users Home</Link>
         </li>
         <li className="nav-item">

@@ -246,11 +246,14 @@
       "id": 6,
       "name": "Instagram Live -- How to Sign up for SNAP",
       "date": "2021-08-10",
+      "time": "4pm - 5pm",
+      "location": "On-line/Zoom",
       "description": "Join us to learn how to get SNAP and learn about the common reasons that people get denied that you can avoid."
     },
     {
       "name": "Free Tax Help",
       "date": "2022-02-25",
+      "time": "4pm - 9pm",
       "location": "200 Main Street Nashville, TN 37228",
       "description": "This event will have tax professionals available to help you file your income taxes and get the maximum refund possible.",
       "id": 7
@@ -258,6 +261,7 @@
     {
       "name": "Winter Coat Drive",
       "date": "2021-10-01",
+      "time": "9am - 9pm",
       "location": "Youth Connections Resource Center",
       "description": "Come donate your gently used coats OR come shop if you're in need!",
       "id": 8
@@ -265,6 +269,7 @@
     {
       "name": "COVID-19 Vaccine Info Session",
       "date": "2021-08-07",
+      "time": "4pm - 9pm",
       "location": "McKendree Church ",
       "description": "If you're still not vaccinated, and you would like to learn more about the COVID-19 vaccines, come see us!  We will have a medical professional available for all your questions!",
       "id": 9
@@ -272,6 +277,7 @@
     {
       "name": "Foster Parents Night Out",
       "date": "2021-12-10",
+      "time": "4pm - 10pm",
       "location": "Monroe Harding",
       "description": "If you are a foster parent, and you need a night away, we've got you!  Come bring your foster children for a night of fun, while you and your spouse can spend a night out (or home).  We will have certified and trained baby sitters to keep the kids.  Message us for more details.",
       "id": 10
@@ -393,11 +399,6 @@
   ],
   "messageTags": [
     {
-      "userId": 0,
-      "messageId": 0,
-      "id": 0
-    },
-    {
       "userId": 2,
       "messageId": 17,
       "id": 1
@@ -405,31 +406,11 @@
   ],
   "newsTags": [
     {
-      "userId": 0,
-      "newsLetterId": 0,
-      "id": 0
-    },
-    {
       "userId": 2,
       "newsLetterId": 1,
       "id": 1
     }
   ],
-
-  "messageTags": [
-    {
-      "id": 0,
-      "messageId": 0,
-      "userId": 0
-    },
-    {
-      "userId": 2,
-      "messageId": 18,
-      "id": 1
-    }
-  ],
-  "newsTags": [],
-
   "newsLetters": [
     {
       "id": 1,
@@ -445,28 +426,34 @@
     }
   ],
   "volunteers": [
-      {
-      "name": "",
-      "Address": "",
-      "userId": 0,
-      "date": "",
-      "email": "",
-      "emergencyContactName": "",
-      "emergencyContactNumber": 0,
-      "currentEmployment": "",
-      "educationLevel": "",
-      "otherVolunteerActivities": "",
-      "previousWelfareServices": "",
-      "reasonForVolunteering": "",
-      "specialSkills":"",
-      "convictions": "",
-      "howDidYouHear": "",
-      "referenceName1": "",
-      "referenceEmail1": "",
-      "referencePhone1": 0,
-      "referenceName2": "",
-      "referenceEmail2": "",
-      "referencePhone2": 0    
-      }
+    {
+      "id": 1,
+      "name": "Annora Witherow",
+      "address": "1220 Apache Trl",
+      "cityState": "Nashville",
+      "zip": "37115",
+      "homePhone": "615-973-7767",
+      "mobilePhone": "615-228-3481",
+      "userId": 2,
+      "date": "05/15/2021",
+      "email": "awitherow@bellsouth.net",
+      "emergencyContactName": "Dr.Antgonnamakeit",
+      "emergencyContactNumber": "931-265-1902",
+      "currentEmployment": "Dept of Affairs",
+      "educationLevel": "P.H.D in Art",
+      "otherVolunteerActivities": "YMCA, Community Foundation, The Red Cross",
+      "previousWelfareServices": "Big Brothers/Big Sisters of America",
+      "reasonForVolunteering": "I feel we are obligated to give back to the community and help those in need.",
+      "specialSkills": "Art design, computer programming",
+      "convictions": "N/A",
+      "howDidYouHear": "Many friends associated with the program",
+      "referenceName1": "Heath Gillard",
+      "referenceEmail1": "hGillard@gmail.com",
+      "referencePhone1": "615-372-2671",
+      "referenceName2": "Jody Leonard",
+      "referenceEmail2": "hotstuff@yahoo.vcom",
+      "referencePhone2": "615-423-1534",
+      "isAccepted": true
+    }
   ]
 }
