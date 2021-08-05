@@ -14,7 +14,8 @@ export const VolunteerForm = () => {
 
     today = mm + '/' + dd + '/' + yyyy;
 
-    const [volunteer, setService] = useState({
+    const [volunteer, setVolunteer] = useState({
+    
         name: "",
         address: "",
         cityState: "",
@@ -58,9 +59,9 @@ export const VolunteerForm = () => {
         let selectedVal = controlEvent.target.value
 
         newVolunteer[controlEvent.target.id] = selectedVal
-        setService(newVolunteer)
+        setVolunteer(newVolunteer)
     }
-
+    
     const handleSaveVolunteer = (controlEvent) => {
         
         if (volunteer.textArea === "") {
@@ -76,7 +77,7 @@ export const VolunteerForm = () => {
                     zip: volunteer.zip,
                     homePhone: volunteer.homePhone,
                     mobilePhone: volunteer.mobilePhone,
-                    userId: currentUserId,
+                    userId: volunteer.userId,
                     date: today,
                     email: volunteer.email,
                     emergencyContactName: volunteer.emergencyContactName,
@@ -137,7 +138,7 @@ export const VolunteerForm = () => {
           if (volunteerId) {
             getVolunteerById(volunteerId)
             .then(volunteer => {
-                setService(volunteer)
+                setVolunteer(volunteer)
                 setIsLoading(false)
             })
           } else {
