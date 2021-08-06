@@ -35,7 +35,7 @@ import { EventTagContext } from "../tags/EventTagProvider"
           <div className="eventTime">Time:  {event.time}</div>
           <div className="eventLocation">Location:  {event.location}</div>
           <div className="eventDescription">Details:  {event.description}</div>
-          <button id={event.id} onClick={handleAdd}>Add Event</button>
+          <button id={event.id} onClick={handleAdd}>Save Event</button>
       </section>
    )
   }

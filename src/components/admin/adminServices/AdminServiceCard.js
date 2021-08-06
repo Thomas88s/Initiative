@@ -24,7 +24,7 @@ export const AdminServiceCard = ({ service }) => {
             <div className="service_text">{service.textArea}</div>
             <button className="serviceButton" onClick={() => {
               history.push(`/services/edit/${service.id}`)
-            }}>Edit</button>
+            }}>Edit Service</button>
             <button id={service.id} onClick={handleDelete}>Delete Service</button>
         </section>
     )

@@ -1,0 +1,21 @@
+.externalLinks {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.linkList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+h3,h4,h5,h6{ 
+    margin: 1em
+}

@@ -32,7 +32,7 @@ export const VolunteerAcceptForm = () => {
         zip: "",
         homePhone: "",
         mobilePhone: "",
-        userId: 2,
+        userId: 7,
         date: today,
         email: "",
         emergencyContactName: "",

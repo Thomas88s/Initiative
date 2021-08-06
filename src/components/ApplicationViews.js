@@ -40,6 +40,8 @@ import { VolunteerProvider } from "./volunteers/VolunteerProvider"
 import { VolunteerForm } from "./volunteers/VolunteerForm"
 import { VolunteerList } from "./volunteers/VolunteerList"
 import { VolunteerAcceptForm } from "./volunteers/VolunteerAcceptForm"
+import { ContactForm } from "./contacts/ContactForm"
+import { DonationForm } from "./donations/DonationForm"
 
 
 
@@ -241,6 +243,13 @@ export const ApplicationViews = () => {
                     </UserProvider>
                 </MessageProvider>
             </VolunteerProvider>
+
+            <Route path="/contact"> 
+                     <ContactForm />
+                </Route>
+            <Route path="/donations"> 
+                     <DonationForm />
+                </Route>
         </>
     )
 }

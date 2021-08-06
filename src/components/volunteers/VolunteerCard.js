@@ -9,10 +9,10 @@ import React, { useContext }from "react"
       const history = useHistory()
 
     //   if (volunteer.isAccepted === true) {
-    //    document.getElementById("volunteerButtons").style.visibility = "hidden";} 
-  const handleAccept = () => {
+//     //    document.getElementById("volunteerButtons").style.visibility = "hidden";} 
+//   const handleAccept = () => {
 
-  }
+//   }
       
   const handleRelease = () => {
       deleteVolunteer(volunteer.id)
