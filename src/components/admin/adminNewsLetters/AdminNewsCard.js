@@ -23,7 +23,7 @@
 
           <button className="eventButton" onClick={() => {
                history.push(`/newsLetters/edit/${news.id}`)
-           }}>Edit</button>
+           }}>Edit Article</button>
           <button onClick={handleRelease}>Delete Article</button>
       </section>
    )

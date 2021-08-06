@@ -127,7 +127,7 @@ export const VolunteerForm = () => {
                     referenceEmail2: volunteer.referenceEmail2,
                     referencePhone2: volunteer.referencePhone2,
                     isAccepted: volunteer.isAccepted})
-                    .then(() => history.push("/volunteers"))
+                    .then(() => history.push("/"))
             }
         }
     }

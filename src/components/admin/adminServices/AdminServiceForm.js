@@ -96,7 +96,7 @@ export const AdminServiceForm = () => {
            
             <button className="btn btn-primary"
                 onClick={handleSaveService}>
-                Post
+                Save Service
             </button>
         </form>
     )
