@@ -186,7 +186,7 @@ export const VolunteerForm = () => {
                     <textarea type="text" id="name"   className="form-control" onChange={handleControlledInputChange} value={volunteer.email} />
                 </div>
                 <div className="form-group">
-                    <h4>Emergency Information</h4>
+                    <h4 className="title">Emergency Information</h4>
                 <label htmlFor="emergencyContactName">Emergency Contact Name:</label>
                     <textarea type="text" id="emergencyContactName"   className="form-control" onChange={handleControlledInputChange} value={volunteer.emergencyContactName} />
                 </div>
@@ -196,7 +196,7 @@ export const VolunteerForm = () => {
                     <textarea type="text" id="emergencyContactNumber"   className="form-control" onChange={handleControlledInputChange} value={volunteer.emergencyContactNumber} />
                 </div>
                 <div className="form-group">
-                    <h4>Employment/Experience</h4>
+                    <h4 className="title">Employment/Experience</h4>
                 <label htmlFor="currentEmployment">Current employment:</label>
                     <textarea type="text" id="currentEmployment"   className="form-control" onChange={handleControlledInputChange} value={volunteer.currentEmployment} />
                 </div>
@@ -224,7 +224,7 @@ export const VolunteerForm = () => {
                     <textarea type="text" id="specialSkills"   className="form-control" onChange={handleControlledInputChange} value={volunteer.specialSkills} />
                 </div>
                 <div className="form-group">
-                    <h4>Background</h4>
+                    <h4 className="title">Background</h4>
                 <label htmlFor="convictions">Have you ever been convicted of a crime? If so, please explain:</label>
                     <textarea type="text" id="convictions"   className="form-control" onChange={handleControlledInputChange} value={volunteer.convictions} />
                 </div>
@@ -233,7 +233,7 @@ export const VolunteerForm = () => {
                     <textarea type="text" id="howDidYouHear"   className="form-control" onChange={handleControlledInputChange} value={volunteer.howDidYouHear} />
                 </div>
                 <div className="form-group">
-                    <h4>References</h4>
+                    <h4 className="title">References</h4>
                 <label htmlFor="referenceName1">Reference Name:</label>
                     <textarea type="text" id="referenceName1"   className="form-control" onChange={handleControlledInputChange} value={volunteer.referenceName1} />
                 </div>
