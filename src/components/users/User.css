@@ -15,35 +15,40 @@
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid black;
+    border: 2px solid #05386B;
+    border-radius: 1em;
   }
 
   .userReceivedMessages {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid black;
+    border: 2px solid #05386B;
+    border-radius: 1em;
   }
 
   .userSentMessages {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid black;
+    border: 2px solid #05386B;
+    border-radius: 1em;
   }
 
   .userEvents {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid black;
+    border: 2px solid #05386B;
+    border-radius: 1em;
   }
 
   .userNews {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid black;
+    border: 2px solid #05386B;
+    border-radius: 1em;
   }
 
 

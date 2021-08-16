@@ -16,7 +16,7 @@ export const MessageCard4 = ({ message }) => {
     return (
         <section className="message">
             <p>To: {foundReceiver?.name}:</p>
-            <p>{message.textArea}</p>
+            <p className="messageText">{message.textArea}</p>
             <p>{message.date}</p>
            
         </section>

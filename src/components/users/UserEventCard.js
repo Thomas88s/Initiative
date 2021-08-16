@@ -12,12 +12,12 @@ export const UserEventCard = ({ event }) => {
     }
    
     return (
-        <section className="event">
+        <section className="userEvenCard">
              <h3 className="eventName">{event.name}</h3>
           <div className="eventDate">Date:  {event.date}</div>
           <div className="eventLocation">Location:  {event.location}</div>
           <div className="eventDescription">Details:  {event.description}</div>
-            <button id={event.id} onClick={handleDelete}>Delete Event</button>
+            <button id={event.id} className="eventsButton" onClick={handleDelete}>Delete Event</button>
         </section>
     )
 }

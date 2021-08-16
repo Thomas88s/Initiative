@@ -16,7 +16,7 @@ export const UserServiceCard = ({ service }) => {
             <div className="service_Name">{service.name}</div>
             <div className="service_text">{service.textArea}</div>
             
-            <button id={service.id} onClick={handleDelete}>Delete Service</button>
+            <button id={service.id} className="serviceButton" onClick={handleDelete}>Delete Service</button>
         </section>
     )
 }

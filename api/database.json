@@ -160,6 +160,12 @@
       "name": "Proud Parenting",
       "textArea": "This program is designed to help new parents navigate the difficulties of being a new parent.  Classes offered about the challenges parenting children, and how to help find the right supports for your family.",
       "userId": 1
+    },
+    {
+      "name": "Job search and placement\n",
+      "textArea": "If you need help finding a job that suits your needs, we have resources to help you find one.",
+      "userId": 1,
+      "id": 17
     }
   ],
   "messages": [
@@ -206,18 +212,32 @@
       "id": 20
     },
     {
-      "textArea": "I would like to thank everyone for all the help.",
-      "receiverId": 1,
-      "senderId": 2,
-      "date": "08/06/2021",
-      "id": 21
-    },
-    {
       "textArea": "Welcome to Initiative!",
       "senderId": 1,
       "receiverId": 2,
       "date": "08/06/2021",
       "id": 22
+    },
+    {
+      "textArea": "how long does job placement take on average? Does it take place over the phone or online?\n\n",
+      "receiverId": 1,
+      "senderId": 7,
+      "date": "08/06/2021",
+      "id": 23
+    },
+    {
+      "textArea": "Job placement is usually done online but can be done over the phone or in person at an event. We will email you the details. Thank you\n\n",
+      "senderId": 1,
+      "receiverId": 7,
+      "date": "08/06/2021",
+      "id": 24
+    },
+    {
+      "textArea": "Congratulations, you have been accepted as a volunteer!",
+      "receiverId": 7,
+      "senderId": 1,
+      "date": "08/06/2021",
+      "id": 25
     }
   ],
   "events": [
@@ -307,6 +327,21 @@
       "userId": 2,
       "serviceId": 5,
       "id": 20
+    },
+    {
+      "userId": 2,
+      "serviceId": 16,
+      "id": 21
+    },
+    {
+      "userId": 7,
+      "serviceId": 4,
+      "id": 22
+    },
+    {
+      "userId": 7,
+      "serviceId": 16,
+      "id": 23
     }
   ],
   "eventTags": [
@@ -326,8 +361,8 @@
       "id": 6
     },
     {
-      "userId": 7,
-      "eventId": 10,
+      "userId": 2,
+      "eventId": 6,
       "id": 7
     }
   ],
@@ -336,6 +371,11 @@
       "userId": 2,
       "messageId": 22,
       "id": 1
+    },
+    {
+      "userId": 7,
+      "messageId": 24,
+      "id": 2
     }
   ],
   "newsTags": [

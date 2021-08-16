@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { MessageContext } from "../../messages/MessageProvider";
 import { UsersContext } from "../../users/UserProvider";
-import { MessageTagContext } from "../tags/MessageTagProvider"
 import "../../messages/Message.css";
 
 var today = new Date();
@@ -90,9 +89,9 @@ export const AdminMessageForm = () => {
                     <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary"
+            <button className="messageButton"
                 onClick={event => {
-                    // event.preventDefault()
+                 
                     handleSaveMessage()
                 }}>
                 Post

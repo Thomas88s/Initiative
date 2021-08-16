@@ -137,14 +137,14 @@ export const VolunteerAcceptForm = () => {
             <h1>Volunteer Acceptance</h1>
             <h4>Do you want to accept {volunteer.name} as a volunteer?</h4>
            
-            <button className="btn btn-primary"
+            <button className="volunteerButton"
             disabled={isLoading}
                 onClick={event => {
                     handleAcceptVolunteer()
                 }}>
                 Accept
             </button>
-            <button className="exit-button"
+            <button className="volunteerButton"
            
                 onClick={() => {
                     history.push(`/admin/volunteers`)

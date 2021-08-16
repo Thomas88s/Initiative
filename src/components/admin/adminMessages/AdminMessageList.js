@@ -115,30 +115,36 @@ export const AdminMessageList = () => {
                 ))}
               </select>
             </div>
+            <div  className="messagesSent">
             <h4>To</h4>
             <div className="SentMessages">
                 {sortedSentMessages.map(message => {
                     return <AdminMessageCard2 key={message.id} message={message} />
                 })}
             </div>    
+                
+            </div>
+            <div className="messagesReceived">
             <h4>From</h4>
             <div className="receivedMessages">
                 {sortedReceivedMessages.map(message => {
                     return <AdminMessageCard key={message.id} message={message} />
                 })}
-            
+
+            </div>
+            </div>
             <h4>Send {selectedUser?.name} a message:</h4>
                   <div className="form-group">
                     <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
-            <button className="btn btn-primary" id={message.id}
+            <button className="messageButton" id={message.id}
                 onClick={event => {
                     handleAdd(event)
                     handleSaveMessage()
                 }}>
                 Post
             </button>
-            </div>
+       
           
         </>
     )

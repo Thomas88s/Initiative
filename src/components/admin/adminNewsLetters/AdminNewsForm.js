@@ -77,8 +77,8 @@ export const AdminNewsForm = () => {
   
 
     return (
-        <form className="eventForm">
-            <h2 className="eventFormTitle">NewsLetter</h2>
+        <form className="newsForm">
+            <h2 className="eventFormTitle">Post an Article</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="title">Article title:</label>
@@ -98,7 +98,7 @@ export const AdminNewsForm = () => {
                     <input type="text" id="textArea" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Please enter text here..." value={news.textArea}/>
                 </div>
           </fieldset>
-            <button className="btn btn-primary"
+            <button className="newsButton"
              disabled={isLoading}
             onClick={handleClickSave}> 
             Save

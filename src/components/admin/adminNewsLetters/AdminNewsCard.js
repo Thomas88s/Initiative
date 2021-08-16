@@ -17,14 +17,14 @@
     
   return   (
       <section className="news" id="eventId">
-          <h3 className="eventTitle">{news.title}</h3>
+          <h3 className="newsTitle">{news.title}</h3>
           <div className="eventDate">{news.date}</div>
           <div className="eventTextArea">{news.textArea}</div>
 
-          <button className="eventButton" onClick={() => {
+          <button className="newsButton" onClick={() => {
                history.push(`/newsLetters/edit/${news.id}`)
            }}>Edit Article</button>
-          <button onClick={handleRelease}>Delete Article</button>
+          <button className="newsButton" onClick={handleRelease}>Delete Article</button>
       </section>
    )
   }
