@@ -86,20 +86,7 @@ export const DonationForm = () => {
      }
    }
 
-    // useEffect(() => {
-    //     getDonations()
-    //     .then(() => {
-    //       if (donationId) {
-    //         getDonationById(donationId)
-    //         .then(donation => {
-    //             setDonation(donation)
-    //             setIsLoading(false)
-    //         })
-    //       } else {
-    //         setIsLoading(false)
-    //       }
-    //     })
-    //   }, [])
+    
    
 
 
@@ -150,7 +137,7 @@ export const DonationForm = () => {
             </fieldset>
             
           
-            <button className="btn btn-primary"
+            <button className="donationButton"
            
                 onClick={event => {
                     handleSaveDonation()

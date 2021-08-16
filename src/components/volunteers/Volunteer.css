@@ -6,7 +6,7 @@
     background-color: #379683;   
     color: white;
   }
-  .Name, .isAccepted {
+  .Name, .isAccepted, .title {
     font-weight: 800;
     color:#05386B;
   }
