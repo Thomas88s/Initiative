@@ -217,6 +217,13 @@
       "receiverId": 2,
       "date": "08/06/2021",
       "id": 22
+    },
+    {
+      "textArea": "Congratulations, you have been accepted as a volunteer!",
+      "receiverId": 7,
+      "senderId": 1,
+      "date": "08/16/2021",
+      "id": 23
     }
   ],
   "events": [
@@ -397,7 +404,7 @@
       "homePhone": "212-347-2188",
       "mobilePhone": "615-228-3481",
       "userId": 7,
-      "date": "08/06/2021",
+      "date": "08/16/2021",
       "email": "awitherow@bellsouth.net",
       "emergencyContactName": "Dr.Antgonnamakeit",
       "emergencyContactNumber": "931-265-1902",

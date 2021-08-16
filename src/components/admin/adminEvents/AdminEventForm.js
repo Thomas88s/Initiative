@@ -48,6 +48,7 @@ export const AdminEventForm = () => {
                 name: event.name,
                 date: event.date,
                 time: event.time,
+                location: event.location,
                 description: event.description
                 
             })
