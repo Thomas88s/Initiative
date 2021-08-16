@@ -260,7 +260,7 @@ export const VolunteerForm = () => {
             </fieldset>
             
           
-            <button className="btn btn-primary"
+            <button className="volunteerButton"
             disabled={isLoading}
                 onClick={event => {
                     handleSaveVolunteer()

@@ -91,7 +91,7 @@ export const ServiceForm = () => {
             </fieldset>
             
           
-            <button className="btn btn-primary"
+            <button className="serviceButton"
             disabled={isLoading}
                 onClick={event => {
                     handleSaveService()

@@ -94,7 +94,7 @@ export const AdminServiceForm = () => {
             </fieldset>
             
            
-            <button className="btn btn-primary"
+            <button className="serviceButton"
                 onClick={handleSaveService}>
                 Save Service
             </button>

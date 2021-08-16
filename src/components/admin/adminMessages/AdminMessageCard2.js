@@ -24,10 +24,10 @@ export const AdminMessageCard2 = ({ message }) => {
     return (
         <div className="adminMessagesSentCard">
             <section className="SentMessage">
-                <p>{message.textArea}</p>
+                <p className="sentMessage">{message.textArea}</p>
                 <p>Sent To: {foundReceiver?.name}</p>
-                <p>{message.date}</p>
-                <button id={message.id} onClick={handleDelete}>Delete</button>
+                <p >{message.date}</p>
+                <button id={message.id} className="messageCardButton"onClick={handleDelete}>Delete</button>
             </section>
         </div>
     )

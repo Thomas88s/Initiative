@@ -21,9 +21,9 @@ export const MessageCard2 = ({ message }) => {
     return (
         <section className="message">
             <p>To Admin:</p>
-            <p>{message.textArea}</p>
+            <p className="messageText">{message.textArea}</p>
             <p>{message.date}</p>
-            <button id={message.id} onClick={handleDelete}>Mark Read</button>
+            <button id={message.id} className="messageButton" onClick={handleDelete}>Mark Read</button>
         </section>
     )
 }

@@ -7,12 +7,6 @@ import React, { useContext }from "react"
   export const VolunteerCard = ({ volunteer }) => {
       const { deleteVolunteer } = useContext(VolunteerContext)
       const history = useHistory()
-
-    //   if (volunteer.isAccepted === true) {
-//     //    document.getElementById("volunteerButtons").style.visibility = "hidden";} 
-//   const handleAccept = () => {
-
-//   }
       
   const handleRelease = () => {
       deleteVolunteer(volunteer.id)
@@ -46,14 +40,14 @@ import React, { useContext }from "react"
           <div className="referencePhone2"><h5>referencePhone2:</h5>  {volunteer.referencePhone2}</div>
           <div className="isAccepted"><h5>Accepted Status:</h5>  {volunteer.isAccepted === true ? "accepted" : "not accepted"}</div>
           
-          <button className="Button" onClick={() => {
+          <button className="volunteerButton" onClick={() => {
                history.push(`/volunteers/edit/${volunteer.id}`)
            }}>Edit</button>
         <div id="volunteerButtons">
-        <button className="Button" onClick={() => {
+        <button className="volunteerButton" onClick={() => {
                history.push(`/volunteers/accept/${volunteer.id}`)
            }}>Accept</button>
-          <button onClick={handleRelease}>Reject</button>
+          <button  className="volunteerButton"onClick={handleRelease}>Reject</button>
         </div>
       </section>
    )

@@ -59,7 +59,7 @@ export const MessageForm = () => {
                     <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary"
+            <button className="messageButton"
                 onClick={event => {
                     handleSaveMessage()
                 }}>
