@@ -135,7 +135,7 @@ export const AdminMessageList = () => {
             </div>
             <h4>Send {selectedUser?.name} a message:</h4>
                   <div className="form-group">
-                    <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
+                    <textarea type="text" id="textArea" rows="4" className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
             <button className="messageButton" id={message.id}
                 onClick={event => {

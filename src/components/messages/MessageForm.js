@@ -56,7 +56,7 @@ export const MessageForm = () => {
             <h4>Send message to Services</h4>
             <fieldset>
                 <div className="form-group">
-                    <textarea type="text" id="textArea" required autoFocus className="form-control" onChange={handleControlledInputChange} value={message.textArea} />
+                    <textarea type="text" id="textArea" required autoFocus className="form-control" rows="4" onChange={handleControlledInputChange} value={message.textArea} />
                 </div>
             </fieldset>
             <button className="messageButton"
