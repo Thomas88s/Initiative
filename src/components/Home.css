@@ -2,7 +2,8 @@
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid black;
+    border: 2px solid #05386B;
+    border-radius: .5em;
 }
 
 .linkList {
@@ -18,4 +19,49 @@ li {
 
 h3,h4,h5,h6{ 
     margin: 1em
+}
+
+.mainTitle {
+    background-color: #05386B;
+  
+}
+.header, .start {
+    background-color: #05386B;
+    padding: 1em;
+   
+    color: #5CDB95;
+}
+.mainTitle {
+    text-align: center;
+ 
+}
+.initiative {
+    color: #05286B
+}
+.footer {
+    background-color: #379683;
+    padding: 1em;
+}
+
+
+.volDon {
+    display: flex;
+
+}
+.box {
+    border:  2px solid #05386B;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #5CDB95;
+    margin: .25em;
+   
+}
+.list {
+    display: flex;
+}
+.list2, .list1 {
+    margin:1em;
+}
+ .links {
+    text-decoration: none;
 }
