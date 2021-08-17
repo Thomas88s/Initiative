@@ -217,13 +217,6 @@
       "receiverId": 2,
       "date": "08/06/2021",
       "id": 22
-    },
-    {
-      "textArea": "Congratulations, you have been accepted as a volunteer!",
-      "receiverId": 7,
-      "senderId": 1,
-      "date": "08/16/2021",
-      "id": 23
     }
   ],
   "events": [
