@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react"
+import { apiUrl } from "../../index.js"
 
  export const EventContext = createContext()
 
@@ -6,18 +7,18 @@ import React, { useState, createContext } from "react"
     const [events, setEvents] = useState([])
 
     const getEvents = () => {
-        return fetch("http://localhost:8088/events")
+        return fetch(`${apiUrl}events`)
         .then(res => res.json())
         .then(setEvents)
     }
     const getEventById = (id) => {
-        return fetch(`http://localhost:8088/events/${id}`)
+        return fetch(`${apiUrl}events/${id}`)
         .then(res => res.json())
         }
 
 
     const addEvent = eventObj => {
-        return fetch("http://localhost:8088/events", {
+        return fetch(`${apiUrl}events`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -29,14 +30,14 @@ import React, { useState, createContext } from "react"
     }
 
     const deleteEvent = eventId => {
-        return fetch(`http://localhost:8088/events/${eventId}`, {
+        return fetch(`${apiUrl}events/${eventId}`, {
             method: "DELETE"
         })
             .then(getEvents)
     }
 
     const updateEvent = event => {
-        return fetch(`http://localhost:8088/events/${event.id}`, {
+        return fetch(`${apiUrl}events/${event.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"

@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react"
+import { apiUrl } from "../../index.js"
 
 export const NewsContext = createContext()
 
@@ -6,18 +7,18 @@ export const NewsLetterProvider = (props) => {
     const [news, setNews] = useState([])
 
     const getNews = () => {
-        return fetch("http://localhost:8088/newsLetters")
+        return fetch(`${apiUrl}newsLetters`)
             .then(res => res.json())
             .then(setNews)
     }
 
     const getNewsById = (id) => {
-        return fetch(`http://localhost:8088/newsLetters/${id}`)
+        return fetch(`${apiUrl}newsLetters/${id}`)
             .then(res => res.json())
     }
 
     const addNews = newsObj => {
-        return fetch("http://localhost:8088/newsLetters", {
+        return fetch(`${apiUrl}newsLetters`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -28,14 +29,14 @@ export const NewsLetterProvider = (props) => {
     }
 
     const deleteNews = newsId => {
-        return fetch(`http://localhost:8088/newsLetters/${newsId}`, {
+        return fetch(`${apiUrl}newsLetters/${newsId}`, {
             method: "DELETE"
         })
             .then(getNews)
     }
 
     const editNews = news => {
-        return fetch(`http://localhost:8088/newsLetters/${news.id}`, {
+        return fetch(`${apiUrl}newsLetters/${news.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
