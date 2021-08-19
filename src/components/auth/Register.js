@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
+import { apiUrl } from "../../index.js"
 import "./Login.css"
 
 export const Register = () => {
@@ -17,7 +18,7 @@ export const Register = () => {
 
     const existingUserCheck = () => {
         // If your json-server URL is different, please change it below!
-        return fetch(`http://localhost:8088/users?email=${registerUser.email}`)
+        return fetch(`${apiUrl}users?email=${registerUser.email}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -29,7 +30,7 @@ export const Register = () => {
             .then((userExists) => {
                 if (!userExists) {
                     // If your json-server URL is different, please change it below!
-                    fetch("http://localhost:8088/users", {
+                    fetch(`${apiUrl}users`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

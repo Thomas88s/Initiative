@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom";
+import { apiUrl } from "../../index.js"
 import "./Login.css"
 
 
@@ -18,7 +19,7 @@ export const Login = () => {
 
     const existingUserCheck = () => {
         // If your json-server URL is different, please change it below!
-        return fetch(`http://localhost:8088/users?email=${loginUser.email}`)
+        return fetch(`${apiUrl}users?email=${loginUser.email}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -29,7 +30,7 @@ export const Login = () => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    // The user id is saved under the key nutshell_user in session Storage. Change below if needed!
+                    // The user id is saved under the key initiative_user in session Storage. Change below if needed!
                     sessionStorage.setItem("App_user", exists.id)
                     history.push("/")
                 } else {
@@ -46,7 +47,7 @@ export const Login = () => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nutshell</h1>
+                    <h1>Initiative</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>

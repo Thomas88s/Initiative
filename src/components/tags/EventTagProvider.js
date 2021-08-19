@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react"
+import { apiUrl } from "../../index.js"
 
 export const EventTagContext = createContext()
 
@@ -6,18 +7,18 @@ export const EventTagProvider = (props) => {
     const [eventTags, setEventTags] = useState([])
 
     const getEventTags = () => {
-        return fetch("http://localhost:8088/eventTags?_expand=event")
+        return fetch(`${apiUrl}eventTags?_expand=event`)
             .then(res => res.json())
             .then(setEventTags)
     }
 
     const getEventTagById = (id) => {
-        return fetch(`http://localhost:8088/eventTags/${id}`)
+        return fetch(`${apiUrl}eventTags/${id}`)
             .then(res => res.json())
     }
 
     const addEventTag = eventTagObj => {
-        return fetch("http://localhost:8088/eventTags", {
+        return fetch(`${apiUrl}eventTags`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -28,7 +29,7 @@ export const EventTagProvider = (props) => {
     }
 
     const deleteEventTag = eventTagId => {
-        return fetch(`http://localhost:8088/eventTags/${eventTagId}`, {
+        return fetch(`${apiUrl}eventTags/${eventTagId}`, {
             method: "DELETE"
         })
             .then(getEventTags)

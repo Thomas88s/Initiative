@@ -1,4 +1,6 @@
 import React, { useState, createContext } from "react"
+import { apiUrl } from "../../index.js"
+
 
 export const VolunteerContext = createContext()
 
@@ -6,18 +8,18 @@ export const VolunteerProvider = (props) => {
     const [volunteers, setVolunteers] = useState([])
 
     const getVolunteers = () => {
-        return fetch("http://localhost:8088/volunteers?_expand=user")
+        return fetch(`${apiUrl}volunteers?_expand=user`)
             .then(res => res.json())
             .then(setVolunteers)
     }
 
     const getVolunteerById = (id) => {
-        return fetch(`http://localhost:8088/volunteers/${id}`)
+        return fetch(`${apiUrl}volunteers/${id}`)
             .then(res => res.json())
     }
 
     const addVolunteer = volunteerObj => {
-        return fetch("http://localhost:8088/volunteers", {
+        return fetch(`${apiUrl}volunteers`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -28,14 +30,14 @@ export const VolunteerProvider = (props) => {
     }
 
     const deleteVolunteer = volunteerId => {
-        return fetch(`http://localhost:8088/volunteers/${volunteerId}`, {
+        return fetch(`${apiUrl}volunteers/${volunteerId}`, {
             method: "DELETE"
         })
             .then(getVolunteers)
     }
 
     const editVolunteer = volunteer => {
-        return fetch(`http://localhost:8088/volunteers/${volunteer.id}`, {
+        return fetch(`${apiUrl}volunteers/${volunteer.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

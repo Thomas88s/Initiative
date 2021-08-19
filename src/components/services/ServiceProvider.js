@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react"
+import { apiUrl } from "../../index.js"
 
 export const ServiceContext = createContext()
 
@@ -6,18 +7,18 @@ export const ServiceProvider = (props) => {
     const [services, setServices] = useState([])
 
     const getServices = () => {
-        return fetch("http://localhost:8088/services")
+        return fetch(`${apiUrl}services`)
             .then(res => res.json())
             .then(setServices)
     }
 
     const getServiceById = (id) => {
-        return fetch(`http://localhost:8088/services/${id}`)
+        return fetch(`${apiUrl}services/${id}`)
             .then(res => res.json())
     }
 
     const addService = serviceObj => {
-        return fetch("http://localhost:8088/services", {
+        return fetch(`${apiUrl}services`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -28,14 +29,14 @@ export const ServiceProvider = (props) => {
     }
 
     const deleteService = serviceId => {
-        return fetch(`http://localhost:8088/services/${serviceId}`, {
+        return fetch(`${apiUrl}services/${serviceId}`, {
             method: "DELETE"
         })
             .then(getServices)
     }
 
     const editService = service => {
-        return fetch(`http://localhost:8088/services/${service.id}`, {
+        return fetch(`${apiUrl}services/${service.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
