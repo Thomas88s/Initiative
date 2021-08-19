@@ -22,6 +22,10 @@ An organization can list all the services rendered in one place with an easy int
 7. Run `npm start` to verify that installation was successful.
 8. Run `npm bootstrap install`  to install the bootstrap package.
 
+## Deployment note
+
+To get the full experience, the app will need to be deployed twice. Once as a user, where anyone can sign in and get access, and once as the admin. Admin can only be accessed with the correct email and it is as follows: `admin@initiative.com`.
+
 ## How Initiative works
 
 1. After initial sign in, users are directed to the user side interface of the  Initiative application. This includes a user specific experience that is tailored to the user.
@@ -32,7 +36,7 @@ An organization can list all the services rendered in one place with an easy int
 6. A newsletter that will be displayed on the users page. This newsletter is posted by admin and can be seen by all users.
 7. All data pertaining to specific users, added events and services, messages, user profile, volunteer info and donation info, is seen only by the specific user and admin.
 8. Users can sign up to be a volunteer which will then got through an approval process completed by admin.
-9. Users can use a form to make donations to the organization.
+9.  Users can use a form to make donations to the organization.
 10. After initial sign in, admin directed to the admin side interface of the  Initiative application. This includes a admin specific experience that allows admin to interface with users. 
 11. Admins are able to view users profiles for use, along with their related programs and messages. 
 12. Admin and users will come in contact to one another through a message app.

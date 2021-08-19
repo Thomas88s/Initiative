@@ -162,8 +162,8 @@
       "userId": 1
     },
     {
-      "name": "Job search and placement\n",
-      "textArea": "If you need help finding a job that suits your needs, we have resources to help you find one.",
+      "name": "Job search and placement",
+      "textArea": "If you need help finding a job that suits your needs, we have resources to help you find one.\n",
       "userId": 1,
       "id": 17
     }
@@ -217,6 +217,34 @@
       "receiverId": 2,
       "date": "08/06/2021",
       "id": 22
+    },
+    {
+      "textArea": "\tHello Irene,\n\n\t Welcome to Independent Living Housing program! We would like to answer any questions you may have and will reach out as soon as your request is \tprocessed. \n\n\tThank you for trusting in us,\n\tAdmin\n",
+      "senderId": 1,
+      "receiverId": 7,
+      "date": "08/17/2021",
+      "id": 23
+    },
+    {
+      "textArea": "\tHow long does job placement take on average? Does it take place over the phone or online?\n\n\tThanks, Irene Hammet\n\n",
+      "receiverId": 1,
+      "senderId": 7,
+      "date": "08/17/2021",
+      "id": 24
+    },
+    {
+      "textArea": "Job placement is usually done online but can be done over the phone or in person at an event. We will email you the details.\n\tThe length of time it takes to get placed is dependent on several factors. In other words, it depends.\n\n\t Thank you,\n\tAdmin\n",
+      "senderId": 1,
+      "receiverId": 7,
+      "date": "08/17/2021",
+      "id": 25
+    },
+    {
+      "textArea": "Congratulations, you have been accepted as a volunteer!",
+      "receiverId": 7,
+      "senderId": 1,
+      "date": "08/17/2021",
+      "id": 26
     }
   ],
   "events": [
@@ -306,6 +334,16 @@
       "userId": 2,
       "serviceId": 5,
       "id": 20
+    },
+    {
+      "userId": 7,
+      "serviceId": 4,
+      "id": 21
+    },
+    {
+      "userId": 7,
+      "serviceId": 17,
+      "id": 22
     }
   ],
   "eventTags": [
@@ -335,6 +373,16 @@
       "userId": 2,
       "messageId": 22,
       "id": 1
+    },
+    {
+      "userId": 7,
+      "messageId": 23,
+      "id": 2
+    },
+    {
+      "userId": 7,
+      "messageId": 25,
+      "id": 3
     }
   ],
   "newsTags": [
@@ -397,7 +445,7 @@
       "homePhone": "212-347-2188",
       "mobilePhone": "615-228-3481",
       "userId": 7,
-      "date": "08/16/2021",
+      "date": "08/17/2021",
       "email": "awitherow@bellsouth.net",
       "emergencyContactName": "Dr.Antgonnamakeit",
       "emergencyContactNumber": "931-265-1902",
@@ -415,7 +463,7 @@
       "referenceName2": "Jody Leonard",
       "referenceEmail2": "ebony1992@gmail.com",
       "referencePhone2": "615-423-1534",
-      "isAccepted": false
+      "isAccepted": true
     }
   ]
 }
